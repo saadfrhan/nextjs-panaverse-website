@@ -27,7 +27,7 @@ export const Mobbar = () => {
             icon={<Icon as={HomeIcon} />}
           />
         </Link>
-        <Link href="/course">
+        <Link href="/courses">
           <IconButton
             rounded="full"
             w={50} h={50}

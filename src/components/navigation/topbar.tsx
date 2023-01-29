@@ -16,7 +16,7 @@ export default function Topbar({ landscape }: { landscape: boolean }) {
         <Link href="/">Home</Link>
       </Button>
         <Button>
-          <Link href="courses">Courses</Link>
+          <Link href="/courses">Courses</Link>
         </Button></Flex>}
       <Flex w="100%" justifyContent="flex-end" alignContent="center" alignItems="center">
         <IconButton

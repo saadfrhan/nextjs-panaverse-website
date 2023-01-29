@@ -11,8 +11,6 @@ import { useMediaQuery } from '@chakra-ui/react';
 import Topbar from '@/components/navigation/topbar';
 import { Mobbar } from '@/components/navigation/mobbar';
 
-
-
 const inter = Inter({
   variable: '--inter-font',
   subsets: ['latin']
@@ -28,8 +26,6 @@ export default function RootLayout({
     ssr: true,
     fallback: false
   });
-
-  console.log(landscape);
 
   return (
     <html lang="en">
