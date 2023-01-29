@@ -1,15 +1,17 @@
 "use client";
 
 import {
-  Button,
-  ChakraProvider, Flex
+  ChakraProvider
 } from '@chakra-ui/react';
-import Image from "next/image";
-import Panaverse from '../images/panaverse.png';
 import { Inter } from '@next/font/google'
-import Link from 'next/link';
 import '../styles/globals.css';
 import { motion } from "framer-motion";
+import { useMediaQuery } from '@chakra-ui/react';
+
+import Topbar from '@/components/navigation/topbar';
+import { Mobbar } from '@/components/navigation/mobbar';
+
+
 
 const inter = Inter({
   variable: '--inter-font',
@@ -21,22 +23,23 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
+  const [landscape] = useMediaQuery('(min-width: 994px)', {
+    ssr: true,
+    fallback: false
+  });
+
+  console.log(landscape);
+
   return (
     <html lang="en">
       <head />
       <body className={inter.variable}>
         <ChakraProvider>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-            <Flex paddingBlock={5} paddingInline={10} gap={6} alignContent="center" alignItems="center" justifyContent="flex-start">
-              <Image alt="panaverse" src={Panaverse} className="nav-pv" />
-              <Button>
-                <Link href="/">Home</Link>
-              </Button>
-              <Button>
-                <Link href="courses">Courses</Link>
-              </Button>
-            </Flex>
+            <Topbar landscape={landscape} />
             {children}
+            {!landscape && <Mobbar />}
           </motion.div>
         </ChakraProvider>
       </body>
