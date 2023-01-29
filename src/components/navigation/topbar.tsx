@@ -10,7 +10,7 @@ export default function Topbar({ landscape }: { landscape: boolean }) {
   const { colorMode, toggleColorMode } = useColorMode()
 
   return (
-    <Flex paddingBlock={5} paddingInline={10} alignContent="center" alignItems="center">
+    <Flex p={5} alignContent="center" alignItems="center">
       <Image alt="panaverse" src={Panaverse} className={`nav-pv ${colorMode === 'dark' && 'dark-pv'}`} />
       {landscape && <Flex gap={6}><Button>
         <Link href="/">Home</Link>

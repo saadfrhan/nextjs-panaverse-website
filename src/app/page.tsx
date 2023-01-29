@@ -15,7 +15,7 @@ export default function Home() {
       height="auto"
       bg={gradientBg}
       left={
-        <Flex direction={["column"]} color="white">
+        <Flex direction="column" color="white">
           <MotionDiv negInit={true} dimension="y" transition={{ type: "spring", stiffness: 100 }}>
             <Heading fontWeight="extrabold" textAlign="left" size={["lg", "xl", "lg", "xl"]} mb={4} lineHeight='tall' as="h1" >
               {home[0].heads?.first!}
