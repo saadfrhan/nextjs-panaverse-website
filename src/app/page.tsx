@@ -68,7 +68,7 @@ export default function Home() {
       }
     />
 
-    < Container
+    <Container
       marginBlock={50}
       height={["auto", "60vh", "auto", "auto"]}
       marginInline="10%"
