@@ -1,91 +1,81 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
+"use client";
 
-const inter = Inter({ subsets: ['latin'] })
+import Container from "@/components/home/container";
+import { gradientBg, home } from "@/constants/home";
+import MotionDiv from "@/utils/motion";
+import { Flex, Heading, Text } from "@chakra-ui/react";
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+  return (<Flex direction="column">
+    <Container
+      padding={10}
+      gap={10}
+      height="auto"
+      rounded={9}
+      bg={gradientBg}
+      left={
+        <Flex direction="column" color="white">
+          <MotionDiv negInit={true} dimension="y" transition={{ type: "spring", stiffness: 100 }}>
+            <Heading fontWeight="extrabold" textAlign="left" size={["lg", "xl", "lg", "xl"]} mb={4} lineHeight='tall' as="h1" >
+              {home[0].heads?.first!}
+            </Heading>
+          </MotionDiv>
+          <MotionDiv negInit={true} dimension="x">
+            <Heading size="1xl">
+              {home[0].heads?.second}
+            </Heading>
+          </MotionDiv>
+        </Flex>
+      }
+    />
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
+    <Container
+      height={["auto", "60vh", "auto", "auto"]}
+      gap={3}
+      marginBlock={50}
+      center={<MotionDiv negInit={true} dimension="y">
+        <Flex direction="column">
+          <Heading
+            mb={3}
+            as="h1" size={["lg", "xl", "lg", "xl"]}>
+            {home[1].quote?.text}
+          </Heading>
+          <Text fontStyle="italic">{home[1].quote?.author}</Text>
+        </Flex>
+      </MotionDiv>
+      }
+    />
 
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+    <Container
+      height={["auto", "60vh", "auto", "auto"]}
+      marginBlock={6}
+      center={<MotionDiv transition={{ type: "tween" }} dimension="y">
+        <Flex direction="column" justifyContent="center" className="diagonal-box" as="div">
+          <Heading marginBlock={3}>
+            {home[2].info?.head}
+          </Heading>
+          <Text textAlign="justify">
+            {home[2].info?.text}
+          </Text>
+        </Flex >
+      </MotionDiv>
+      }
+    />
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    <Container
+      marginBlock={50}
+      height={["auto", "60vh", "auto", "auto"]}
+      center={<MotionDiv dimension="y" transition={{ type: "tween" }}>
+        <Flex direction="column">
+          <Heading mb={5}>
+            {home[3].prog?.head}
+          </Heading>
+          <Text>
+            {home[3].prog?.text}
+          </Text>
+        </Flex>
+      </MotionDiv>
+      }
+    />
+  </Flex>)
 }
