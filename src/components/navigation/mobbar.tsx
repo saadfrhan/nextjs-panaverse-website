@@ -6,11 +6,9 @@ import React, { useState } from 'react'
 import {
   AiFillHome as HomeIcon,
   AiFillBook as CourseIcon,
-  AiOutlineMenu as MenuIcon
+  AiOutlineMenu as MenuIcon,
+  AiOutlineClose as CloseIcon
 } from 'react-icons/ai';
-import {
-  GrClose as CloseIcon,
-} from 'react-icons/gr';
 
 export const Mobbar = () => {
 
