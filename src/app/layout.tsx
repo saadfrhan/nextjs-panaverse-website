@@ -34,7 +34,7 @@ export default function RootLayout({
         <ChakraProvider>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             <Topbar landscape={landscape} />
-            <Flex direction="column" paddingInline="3%">
+            <Flex direction="column" paddingInline="5%">
               {children}
             </Flex>
             {!landscape && <Mobbar />}
