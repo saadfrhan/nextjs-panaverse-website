@@ -16,7 +16,7 @@ export default function Container({
   [key: string]: any
 }) {
   return (
-    <Flex bgImage={bg} {...props} direction={['column', 'column', 'column', 'row']} justifyContent="space-between">
+    <Flex bgImage={bg} {...props} direction={['column', 'column', 'column', 'row']} justifyContent={center ? 'center' : "space-between"}>
 
       {left && left}
       {center && center}

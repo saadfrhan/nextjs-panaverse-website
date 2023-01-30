@@ -1,7 +1,7 @@
 "use client";
 
 import {
-  ChakraProvider
+  ChakraProvider, Flex
 } from '@chakra-ui/react';
 import { Inter } from '@next/font/google'
 import '../styles/globals.css';
@@ -34,7 +34,9 @@ export default function RootLayout({
         <ChakraProvider>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             <Topbar landscape={landscape} />
-            {children}
+            <Flex direction="column" paddingInline="3%">
+              {children}
+            </Flex>
             {!landscape && <Mobbar />}
           </motion.div>
         </ChakraProvider>

@@ -1,11 +1,9 @@
 "use client";
 
 import Container from "@/components/home/container";
-import { home } from "@/constants/home";
+import { gradientBg, home } from "@/constants/home";
 import MotionDiv from "@/utils/motion";
 import { Flex, Heading, Text } from "@chakra-ui/react";
-
-const gradientBg = "linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12)";
 
 export default function Home() {
   return (<Flex direction="column">
@@ -13,6 +11,7 @@ export default function Home() {
       padding={10}
       gap={10}
       height="auto"
+      rounded={9}
       bg={gradientBg}
       left={
         <Flex direction="column" color="white">
@@ -34,7 +33,6 @@ export default function Home() {
       height={["auto", "60vh", "auto", "auto"]}
       gap={3}
       marginBlock={50}
-      paddingInline="10%"
       center={<MotionDiv negInit={true} dimension="y">
         <Flex direction="column">
           <Heading
@@ -50,7 +48,6 @@ export default function Home() {
 
     <Container
       height={["auto", "60vh", "auto", "auto"]}
-      marginInline="10%"
       marginBlock={6}
       center={<MotionDiv transition={{ type: "tween" }} dimension="y">
         <Flex direction="column" justifyContent="center" className="diagonal-box" as="div">
@@ -68,7 +65,6 @@ export default function Home() {
     <Container
       marginBlock={50}
       height={["auto", "60vh", "auto", "auto"]}
-      marginInline="10%"
       center={<MotionDiv dimension="y" transition={{ type: "tween" }}>
         <Flex direction="column">
           <Heading mb={5}>

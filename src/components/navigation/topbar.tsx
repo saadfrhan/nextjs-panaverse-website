@@ -11,13 +11,17 @@ export default function Topbar({ landscape }: { landscape: boolean }) {
 
   return (
     <Flex p={5} alignContent="center" alignItems="center">
-      <Image alt="panaverse" src={Panaverse} className={`nav-pv ${colorMode === 'dark' && 'dark-pv'}`} />
-      {landscape && <Flex gap={6}><Button>
-        <Link href="/">Home</Link>
-      </Button>
+      <Link href="/">
+        <Image alt="panaverse" src={Panaverse} className={`nav-pv ${colorMode === 'dark' && 'dark-pv'}`} />
+      </Link>
+      {landscape && <Flex gap={6}>
+        <Button>
+          <Link href="/">Home</Link>
+        </Button>
         <Button>
           <Link href="/courses">Courses</Link>
-        </Button></Flex>}
+        </Button>
+      </Flex>}
       <Flex w="100%" justifyContent="flex-end" alignContent="center" alignItems="center">
         <IconButton
           aria-label="toggle-mode"
