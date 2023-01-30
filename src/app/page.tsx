@@ -48,10 +48,9 @@ export default function Home() {
 
     <Container
       height={["auto", "60vh", "auto", "auto"]}
-      marginBlock={6}
       center={<MotionDiv transition={{ type: "tween" }} dimension="y">
         <Flex direction="column" justifyContent="center" className="diagonal-box" as="div">
-          <Heading marginBlock={3}>
+          <Heading mb={3}>
             {home[2].info?.head}
           </Heading>
           <Text textAlign="justify">
@@ -63,7 +62,6 @@ export default function Home() {
     />
 
     <Container
-      marginBlock={50}
       height={["auto", "60vh", "auto", "auto"]}
       center={<MotionDiv dimension="y" transition={{ type: "tween" }}>
         <Flex direction="column">

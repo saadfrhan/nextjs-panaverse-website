@@ -1,5 +1,7 @@
 export const gradientBg = "linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12)";
 
+export const shadowColor = "rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset"
+
 export const home = [
   {
     heads: {
@@ -9,7 +11,7 @@ export const home = [
   },
   {
     quote: {
-      text: "The Future of the Web is Web 3.0, Metaverse, and Edge Computing. Panaverse DAO is a movement to spread these technolgies globally. It is community of Web 3.0 and Metaverse developers, designers, trainers, startup founders and service providers.",
+      text: `"The Future of the Web is Web 3.0, Metaverse, and Edge Computing. Panaverse DAO is a movement to spread these technolgies globally. It is community of Web 3.0 and Metaverse developers, designers, trainers, startup founders and service providers."`,
       author: "~ Zia Khan"
     }
   },

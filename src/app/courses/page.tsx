@@ -1,6 +1,6 @@
 "use client";
 
-import Item from '@/components/courses/Item';
+import QuarterItem from '@/components/courses/QuarterItem';
 import Container from '@/components/home/container';
 import { courses } from '@/constants/course';
 import { gradientBg } from '@/constants/home';
@@ -30,19 +30,19 @@ export default function Courses() {
                 bg={gradientBg}
                 mb={3}
                 center={<MotionDiv negInit={true} dimension='y' transition={{ type: "spring" }}>
-                  <Heading size={["lg", "xl", "lg", "2xl"]}>{props.main}</Heading>
+                  <Heading size={["lg", "xl", "lg", "2xl"]} mb={5}>{props.main}</Heading>
                   <Text>{props.mainDesc}</Text>
                 </MotionDiv>}
               />
             )}
-            <Item
+            <QuarterItem
               key={idx}
               {...props}
               isSpecialization={props.courses?.length! > 0 && true}
             />
             {props.courses?.length! > 0 &&
               props.courses?.map((c, index) => (
-                <Item key={index} {...c} />
+                <QuarterItem key={index} {...c} />
               ))}
           </Flex>
         ))

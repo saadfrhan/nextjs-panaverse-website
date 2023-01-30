@@ -15,28 +15,37 @@ export const Mobbar = () => {
   const [close, isClose] = useState(true)
 
   return (
-    <Flex position="sticky" direction="column" justifyContent="flex-start" right={0} bottom={0} p={5} gap={4}>
-      {!close && <>
-        <Link href="/">
-          <IconButton
-            w={50} h={50}
-            rounded="full"
-            aria-label="home"
-            icon={<Icon as={HomeIcon} />}
-          />
-        </Link>
-        <Link href="/courses">
-          <IconButton
-            rounded="full"
-            w={50} h={50}
-            aria-label="home"
-            icon={<Icon as={CourseIcon} />}
-          />
-        </Link>
-      </>}
+    <Flex
+      position="fixed"
+      direction="column"
+      justifyContent="flex-start"
+      left={0}
+      bottom={0}
+      p={5}
+      gap={4}
+      z-index={1}
+    >
+      <Link href="/">
+        <IconButton
+          w={55} h={55}
+          rounded={9}
+          display={close ? 'none' : 'flex'}
+          aria-label="home"
+          icon={<Icon as={HomeIcon} />}
+        />
+      </Link>
+      <Link href="/courses">
+        <IconButton
+          display={close ? 'none' : 'flex'}
+          rounded={9}
+          w={55} h={55}
+          aria-label="home"
+          icon={<Icon as={CourseIcon} w={70} />}
+        >Courses</IconButton>
+      </Link>
       <IconButton
-        w={50} h={50}
-        rounded="full"
+        w={55} h={55}
+        rounded={9}
         onClick={() => isClose(!close)}
         aria-label="home"
         icon={<Icon as={close ? MenuIcon : CloseIcon} />}

@@ -23,8 +23,15 @@ export default function Topbar({ landscape }: { landscape: boolean }) {
             <Link href="/courses">Courses</Link>
           </Button>
         </Flex>}
-      <Flex w="100%" justifyContent="flex-end" alignContent="center" alignItems="center">
+      <Flex justifyContent="flex-end" alignItems="center" position="fixed"
+        right={0}
+        top={0}
+        gap={4}
+        z-index={1}
+        mr={3}
+        mt={6}>
         <IconButton
+          w={55} h={55}
           aria-label="toggle-mode"
           icon={<Icon as={colorMode === "dark" ? MdDarkMode : MdLightMode} />}
           onClick={toggleColorMode}
