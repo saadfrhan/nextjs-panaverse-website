@@ -8,19 +8,45 @@ const HeadingBlock: React.FC<HeadingBlock> = ({ description, heading, isSpeciali
   const { push } = useRouter()
 
   return <Flex direction="column" gap={3} mt={isSpecialization ? 2 : 0}>
-    <Heading
-      size={['lg', 'xl', 'lg', 'xl']}
-      bg={isSpecialization ? gradientBg : 'transparent'}
-      onClick={() => push(`/courses/${heading.toLowerCase().replaceAll(' ', '-').replace(':', '')}`)}
-      cursor="pointer"
-      rounded={9}
-      p={isSpecialization ? 5 : 0}
-      color={isSpecialization ? "white" : "auto"}
-    >
-      {isSpecialization && `${number}. `} {heading}
-    </Heading>
+    {isSpecialization ? <SpecilizationHeading heading={heading} number={number!} push={push} /> :
+      <Heading
+        size={['lg', 'xl', 'lg', 'xl']}
+        bg={'transparent'}
+        onClick={() => push(`/courses/${heading.toLowerCase().replaceAll(' ', '-').replace(':', '')}`)}
+        _hover={{
+          color: 'lightseagreen',
+          textDecoration: 'underline'
+        }}
+        cursor="pointer"
+        rounded={9}
+        p={0}
+        color="auto"
+      >
+        {heading}
+      </Heading>}
     {description && <Text>{description}</Text>}
   </Flex>
+}
+
+const SpecilizationHeading = ({ heading, number, push }: {
+  heading: string, number: string, push: (href: string) => void
+}) => {
+  return (
+    <Heading
+      size={['lg', 'xl', 'lg', 'xl']}
+      bg={gradientBg}
+      _hover={{
+        color: 'lightseagreen',
+        textDecoration: 'underline'
+      }}
+      cursor="pointer"
+      rounded={9}
+      p={5}
+      color={"white"}
+    >
+      {`${number}. `} {heading}
+    </Heading>
+  )
 }
 
 export default HeadingBlock;

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import React from 'react'
 import Panaverse from '../../images/panaverse.png';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
+import styles from './topbar.module.css'
 
 export default function Topbar({ landscape }: { landscape: boolean }) {
 
@@ -13,7 +14,7 @@ export default function Topbar({ landscape }: { landscape: boolean }) {
     <Flex paddingBlock={5} paddingInline="5%" alignContent="center" alignItems="center" justifyContent="space-between">
       <Flex>
         <Link href="/">
-          <Image alt="panaverse" src={Panaverse} className={`nav-pv ${colorMode === 'dark' && 'dark-pv'}`} />
+          <Image alt="panaverse" src={Panaverse} className={styles.navpv} />
         </Link>
         {landscape &&
           <Flex gap={6} alignItems="center">

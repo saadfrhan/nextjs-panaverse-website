@@ -73,7 +73,7 @@ Total Questions: 62, Total Time: 75 minutes
     - Connecting your hardware to wifi.
     <https://randomnerdtutorials.com/wifimanager-with-esp8266-autoconnect-custom-parameter-and-manage-your-ssid-and-password/>
     - Reading data from GPIOs.
-    <https://randomnerdtutorials.com/esp8266-nodemcu-digital-inputs-outputs-arduino/#:~:text=ESP8266%20NodeMCU%20Read%20Digital%20Inputs>,number)%20you%20are%20referring%20to.
+    <https://randomnerdtutorials.com/esp8266-nodemcu-digital-inputs-outputs-arduino/#:~:text=ESP8266%20NodeMCU%20Read%20Digital%20Inputs,number)%20you%20are%20referring%20to/>
     - Controlling LEDs.
     - Reading data from digital sensors.
     <https://randomnerdtutorials.com/esp32-dht11-dht22-temperature-humidity-sensor-arduino-ide/>
@@ -84,7 +84,7 @@ Total Questions: 62, Total Time: 75 minutes
     
     - Displaying data on the cloud.
     - <https://github.com/adesolasamuel/NodeMCU-DHT-Data-to-Arduino-IoT-Cloud>
-    Controlling controller remotely.
+    - Controlling controller remotely.
     - <https://www.instructables.com/Control-ESP8266-Over-the-Internet-from-Anywhere/>
     - Controlling a lamp anywhere in the world.
     - Interacting with different web services.
