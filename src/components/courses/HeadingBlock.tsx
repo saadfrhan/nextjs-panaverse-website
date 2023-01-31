@@ -30,11 +30,6 @@ const SpecilizationHeading = ({ heading, number }: {
     <Heading
       size={['lg', 'xl', 'lg', 'xl']}
       bg={gradientBg}
-      _hover={{
-        color: 'lightseagreen',
-        textDecoration: 'underline'
-      }}
-      cursor="pointer"
       rounded={9}
       p={5}
       color={"white"}
