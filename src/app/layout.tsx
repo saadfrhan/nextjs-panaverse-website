@@ -31,7 +31,6 @@ export default function RootLayout({
 
   return (
     <html lang="en" ref={ref}>
-      <head />
       <body className={inter.variable}>
         <ChakraProvider>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: isInView ? 1 : 0, animationDelay: "2s" }}>

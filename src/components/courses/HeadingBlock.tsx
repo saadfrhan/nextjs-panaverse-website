@@ -13,19 +13,17 @@ const HeadingBlock: React.FC<HeadingBlock> = ({ description, heading, isSpeciali
         size={['lg', 'xl', 'lg', 'xl']}
         bg={'transparent'}
         onClick={() => push(`/courses/${heading.toLowerCase().replaceAll(' ', '-').replace(':', '')}`)}
-        _hover={{
-          color: 'lightseagreen',
-          textDecoration: 'underline'
-        }}
+        color='lightseagreen'
+        textDecoration='underline'
         cursor="pointer"
         rounded={9}
         p={0}
-        color="auto"
       >
         {heading}
-      </Heading>}
+      </Heading>
+    }
     {description && <Text>{description}</Text>}
-  </Flex>
+  </Flex >
 }
 
 const SpecilizationHeading = ({ heading, number, push }: {

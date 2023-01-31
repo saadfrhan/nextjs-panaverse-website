@@ -14,8 +14,11 @@ export default async function Course({ params }: {
 }) {
 
   const { fileContents } = await getPostData(params.id);
+  const title = (params.id.split('-')[0] + "-" + params.id.split('-')[1]).toUpperCase()
+  console.log(title)
 
   return <div className={styles.content}>
+    <title>{title + " - Panaverse"}</title>
     <Markdown>{fileContents}</Markdown>
   </div>
 
