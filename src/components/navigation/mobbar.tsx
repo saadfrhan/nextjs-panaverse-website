@@ -19,13 +19,12 @@ export const Mobbar = () => {
       position="fixed"
       direction="column"
       justifyContent="flex-start"
-      left={0}
-      bottom={0}
-      p={5}
+      left={5}
+      bottom={5}
       gap={4}
       z-index={1}
     >
-      <Link href="/">
+      <Link href="/" prefetch={false}>
         <IconButton
           w={55} h={55}
           rounded={9}
@@ -34,7 +33,7 @@ export const Mobbar = () => {
           icon={<Icon as={HomeIcon} />}
         />
       </Link>
-      <Link href="/courses">
+      <Link href="/courses" prefetch={false}>
         <IconButton
           display={close ? 'none' : 'flex'}
           rounded={9}

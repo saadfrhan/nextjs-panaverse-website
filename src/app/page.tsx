@@ -16,7 +16,7 @@ export default function Home() {
       left={
         <Flex direction="column" color="white">
           <MotionDiv negInit={true} dimension="y" transition={{ type: "spring", stiffness: 100 }}>
-            <Heading fontWeight="extrabold" textAlign="left" size={["lg", "xl", "lg", "xl"]} mb={4} lineHeight='tall' as="h1" >
+            <Heading fontWeight="extrabold" textAlign="left" size={["lg", "xl", "lg", "xl"]} mb={4} lineHeight='tall'>
               {home[0].heads?.first!}
             </Heading>
           </MotionDiv>
@@ -36,8 +36,7 @@ export default function Home() {
       center={<MotionDiv negInit={true} dimension="y">
         <Flex direction="column">
           <Heading
-            mb={3}
-            as="h1" size={["lg", "xl", "lg", "xl"]}>
+            mb={3} size={["lg", "xl", "lg", "xl"]}>
             {home[1].quote?.text}
           </Heading>
           <Text fontStyle="italic">{home[1].quote?.author}</Text>
@@ -48,12 +47,13 @@ export default function Home() {
 
     <Container
       height={["auto", "60vh", "auto", "auto"]}
+      mb={5}
       center={<MotionDiv transition={{ type: "tween" }} dimension="y">
         <Flex direction="column" justifyContent="center" className="diagonal-box" as="div">
           <Heading mb={3}>
             {home[2].info?.head}
           </Heading>
-          <Text textAlign="justify">
+          <Text textAlign="left">
             {home[2].info?.text}
           </Text>
         </Flex >

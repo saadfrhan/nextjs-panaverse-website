@@ -7,36 +7,35 @@ import { MdDarkMode, MdLightMode } from 'react-icons/md';
 
 export default function Topbar({ landscape }: { landscape: boolean }) {
 
-  const { colorMode, toggleColorMode } = useColorMode()
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Flex p={5} alignContent="center" alignItems="center">
-      <Link href="/">
-        <Image alt="panaverse" src={Panaverse} className={`nav-pv ${colorMode === 'dark' && 'dark-pv'}`} />
-      </Link>
-      {landscape &&
-        <Flex gap={6}>
-          <Button>
-            <Link href="/">Home</Link>
-          </Button>
-          <Button>
-            <Link href="/courses">Courses</Link>
-          </Button>
-        </Flex>}
-      <Flex justifyContent="flex-end" alignItems="center" position="fixed"
-        right={0}
-        top={0}
-        gap={4}
-        z-index={1}
-        mr={3}
-        mt={6}>
-        <IconButton
-          w={55} h={55}
-          aria-label="toggle-mode"
-          icon={<Icon as={colorMode === "dark" ? MdDarkMode : MdLightMode} />}
-          onClick={toggleColorMode}
-        />
+    <Flex paddingBlock={5} paddingInline="5%" alignContent="center" alignItems="center" justifyContent="space-between">
+      <Flex>
+        <Link href="/">
+          <Image alt="panaverse" src={Panaverse} className={`nav-pv ${colorMode === 'dark' && 'dark-pv'}`} />
+        </Link>
+        {landscape &&
+          <Flex gap={6} alignItems="center">
+            <Link href="/">
+              <Button>
+                Home
+              </Button>
+            </Link>
+            <Link href="/courses">
+              <Button>
+                Courses
+              </Button>
+            </Link>
+          </Flex>}
       </Flex>
+      <IconButton
+        w={55} h={55}
+        alignSelf="flex-end"
+        aria-label="toggle-mode"
+        icon={<Icon as={colorMode === "dark" ? MdDarkMode : MdLightMode} />}
+        onClick={toggleColorMode}
+      />
     </Flex>
   )
 }

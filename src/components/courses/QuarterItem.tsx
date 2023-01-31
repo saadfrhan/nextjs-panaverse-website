@@ -25,7 +25,7 @@ const QuarterItem: React.FC<ItemProps> = ({
           isLandscape
             ? !isSpecialization
               ? '4vh'
-              : '0.8vh'
+              : '0vh'
             : 0
         }
         direction={
@@ -46,7 +46,7 @@ const QuarterItem: React.FC<ItemProps> = ({
           number={number}
         />
       </Flex>
-    </MotionDiv >
+    </MotionDiv>
   );
 };
 
