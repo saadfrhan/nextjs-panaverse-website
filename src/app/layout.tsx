@@ -33,7 +33,7 @@ export default function RootLayout({
     <html lang="en" ref={ref}>
       <body className={inter.variable}>
         <ChakraProvider>
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: isInView ? 1 : 0, animationDelay: "2s" }}>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: isInView ? 1 : 0 }}>
             <Topbar landscape={landscape} />
             <Flex direction="column" paddingInline="5%" pb="5%">
               {children}

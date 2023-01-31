@@ -6,13 +6,13 @@ import { courses } from '@/constants/course';
 import { gradientBg } from '@/constants/home';
 import { Heads } from '@/ts';
 import { Flex, Heading, Text } from '@chakra-ui/react'
-import React from 'react';
 
 export default function Courses() {
 
   const heads = ["Core Courses", "Specialized Tracks"];
 
-  return (
+  return (<div>
+    <title>Courses - Panaverse</title>
     <Flex direction="column" gap={6}>
       {heads.map(head => (
         courses[head as Heads].map((props, idx) => (
@@ -49,5 +49,5 @@ export default function Courses() {
         ))
       ))}
     </Flex>
-  );
+  </div>);
 }
