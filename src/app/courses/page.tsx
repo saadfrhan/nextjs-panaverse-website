@@ -36,13 +36,12 @@ export default function Courses() {
               />
             )}
             <QuarterItem
-              idx={idx}
               {...props}
               isSpecialization={props.courses?.length! > 0 && true}
             />
             {props.courses?.length! > 0 &&
               props.courses?.map((c, idx) => (
-                <QuarterItem key={idx} idx={idx} {...c} />
+                <QuarterItem key={idx} {...c} />
               ))}
           </Flex>
         ))
