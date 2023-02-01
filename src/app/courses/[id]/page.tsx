@@ -20,7 +20,7 @@ export default async function Course({ params }: {
 
   return <div className={styles.content}>
     <Link href="/courses" replace>
-      <button>Back</button>
+      <button style={{ padding: 5 }}>Back</button>
     </Link>
     <title>{title + " - Panaverse"}</title>
     <Markdown>{fileContents}</Markdown>
