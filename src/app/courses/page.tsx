@@ -11,8 +11,7 @@ export default function Courses() {
 
   const heads = ["Core Courses", "Specialized Tracks"];
 
-  return (<div>
-    <title>Courses - Panaverse</title>
+  return (
     <Flex direction="column" gap={6}>
       {heads.map(head => (
         courses[head as Heads].map((props, idx) => (
@@ -37,17 +36,17 @@ export default function Courses() {
               />
             )}
             <QuarterItem
-              key={idx}
+              idx={idx}
               {...props}
               isSpecialization={props.courses?.length! > 0 && true}
             />
             {props.courses?.length! > 0 &&
-              props.courses?.map((c, index) => (
-                <QuarterItem key={index} {...c} />
+              props.courses?.map((c, idx) => (
+                <QuarterItem key={idx} idx={idx} {...c} />
               ))}
           </Flex>
         ))
       ))}
     </Flex>
-  </div>);
+  );
 }

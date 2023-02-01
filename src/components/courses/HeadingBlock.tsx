@@ -7,17 +7,21 @@ const HeadingBlock: React.FC<HeadingBlock> = ({ description, heading, isSpeciali
 
   return <Flex direction="column" gap={3} mt={isSpecialization ? 2 : 0}>
     {isSpecialization ? <SpecilizationHeading heading={heading} number={number!} /> :
-      <Link href={`/courses/${heading.toLowerCase().replaceAll(' ', '-').replace(':', '')}`}><Heading
-        size={['lg', 'xl', 'lg', 'xl']}
-        bg={'transparent'}
-        color='lightseagreen'
-        textDecoration='underline'
-        cursor="pointer"
-        rounded={9}
-        p={0}
+      <Link
+        href={`/courses/${heading.toLowerCase().replaceAll(' ', '-').replace(':', '')}`}
       >
-        {heading}
-      </Heading></Link>
+        <Heading
+          size={['lg', 'xl', 'lg', 'xl']}
+          bg={'transparent'}
+          color='lightseagreen'
+          textDecoration='underline'
+          cursor="pointer"
+          rounded={9}
+          p={0}
+        >
+          {heading}
+        </Heading>
+      </Link>
     }
     {description && <Text>{description}</Text>}
   </Flex >

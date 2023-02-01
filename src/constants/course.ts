@@ -101,10 +101,13 @@ export const courses: Item = {
 
 }
 
-export const course_slugs = ["ac-351-ambient-computing-with-voice-assistants-and-matter-protocol-devices", "ac-361-embedded-programming-using-c-and-rust",
+export const course_slugs = [
+  "ac-351-ambient-computing-with-voice-assistants-and-matter-protocol-devices", "ac-361-embedded-programming-using-c-and-rust",
+  "bio-361-bioinformatics-with-python", "cn-351-certified-kubernetes-application-developer-(ckad)", "cn-361-developing-multi-cloud-apis-using-cdk-for-terraform", "cs-101-object-oriented-programming-using-typescript",
   "ai-351-developing-planet-scale-intelligent-apis-and-python-programming",
   "ai-361-deep-learning-and-mlops",
-  "bio-351-python-for-biologists", "bio-361-bioinformatics-with-python", "cn-351-certified-kubernetes-application-developer-(ckad)", "cn-361-developing-multi-cloud-apis-using-cdk-for-terraform", "cs-101-object-oriented-programming-using-typescript",
+  "bio-351-python-for-biologists",
   "mv-361-developing-planet-scale-open-virtual-and-augmented-metaverse-experiences",
   "npa-351-ccna-200-301-certification",
-  "w2-201-developing-planet-scale-web-2.0-serverless-cloud-cloud-apps-and-apis-using-next.js-13-and-cloud-development-kit-(cdk)-for-terraform", "w3-351-developing-smart-contracts-and-planet-scale-web-3.0-dapps"]
+  "w2-201-developing-planet-scale-web-2.0-serverless-cloud-cloud-apps-and-apis-using-next.js-13-and-cloud-development-kit-(cdk)-for-terraform", "w3-351-developing-smart-contracts-and-planet-scale-web-3.0-dapps"
+]
