@@ -20,17 +20,9 @@ const QuarterItem: React.FC<ItemProps> = ({
     <MotionDiv dimension="x" negInit={true} transition={{ type: 'tween' }}>
       <Flex
         gap="3vw"
-        alignItems={isSpecialization ? "stretch" : "center"}
-        padding={
-          isLandscape
-            ? !isSpecialization
-              ? '4vh'
-              : '0vh'
-            : 0
-        }
-        direction={
-          isSpecialization ? ['column'] : ['column', 'column', 'column', 'row']
-        }
+        alignItems={isSpecialization ? "none" : "center"}
+        padding={isLandscape && !isSpecialization ? '4vh' : 0}
+        direction={isSpecialization ? 'column' : ['column', 'column', 'column', 'row']}
         w="100%"
       >
         {!isSpecialization && (

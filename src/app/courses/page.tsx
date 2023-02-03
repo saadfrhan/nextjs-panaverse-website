@@ -27,9 +27,11 @@ export default function Courses() {
                 color="white"
                 bg={gradientBg}
                 mb={3}
-                center={
+                element={
                   <Flex direction="column">
-                    <Heading size={["lg", "xl", "lg", "2xl"]} mb={5}>{props.main}</Heading>
+                    <Heading size={["lg", "xl", "lg", "2xl"]} mb={5}>
+                      {props.main}
+                    </Heading>
                     <Text>{props.mainDesc}</Text>
                   </Flex>
                 }

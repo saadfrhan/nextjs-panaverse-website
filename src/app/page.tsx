@@ -6,17 +6,15 @@ import MotionDiv from "@/utils/motion";
 import { Flex, Heading, Text } from "@chakra-ui/react";
 
 export default function Home() {
-  return (<Flex direction="column">
+  return (<Flex direction="column" gap={6}>
     <Container
       padding={10}
-      gap={10}
-      height="auto"
       rounded={9}
       bg={gradientBg}
-      left={
+      element={
         <Flex direction="column" color="white">
           <MotionDiv negInit={true} dimension="y" transition={{ type: "spring", stiffness: 100 }}>
-            <Heading fontWeight="extrabold" textAlign="left" size={["lg", "xl", "lg", "xl"]} mb={4} lineHeight='tall'>
+            <Heading fontWeight="extrabold" textAlign="left" size={["lg", "xl"]} mb={4}>
               {home[0].heads?.first!}
             </Heading>
           </MotionDiv>
@@ -31,9 +29,7 @@ export default function Home() {
 
     <Container
       height={["auto", "60vh", "auto", "auto"]}
-      gap={3}
-      marginBlock={50}
-      center={<MotionDiv negInit={true} dimension="y">
+      element={<MotionDiv negInit={true} dimension="y">
         <Flex direction="column">
           <Heading
             mb={3} size={["lg", "xl", "lg", "xl"]}>
@@ -47,8 +43,7 @@ export default function Home() {
 
     <Container
       height={["auto", "60vh", "auto", "auto"]}
-      mb={5}
-      center={<MotionDiv transition={{ type: "tween" }} dimension="y">
+      element={<MotionDiv transition={{ type: "tween" }} dimension="y">
         <Flex direction="column" justifyContent="center" className="diagonal-box" as="div">
           <Heading mb={3}>
             {home[2].info?.head}
@@ -63,7 +58,7 @@ export default function Home() {
 
     <Container
       height={["auto", "60vh", "auto", "auto"]}
-      center={<MotionDiv dimension="y" transition={{ type: "tween" }}>
+      element={<MotionDiv dimension="y" transition={{ type: "tween" }}>
         <Flex direction="column">
           <Heading mb={5}>
             {home[3].prog?.head}
