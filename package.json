@@ -1,7 +1,6 @@
 {
   "name": "nextjs-panaverse-website",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -19,7 +18,8 @@
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.6",
     "framer-motion": "^8.5.4",
-    "next": "13.1.6",
+    "markdown-to-jsx": "^7.1.8",
+    "next": "^13.1.7-canary.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",

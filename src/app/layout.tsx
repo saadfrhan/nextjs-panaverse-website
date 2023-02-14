@@ -5,10 +5,12 @@ import {
 } from '@chakra-ui/react';
 import { Inter } from '@next/font/google'
 import '../styles/globals.css';
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useMediaQuery } from '@chakra-ui/react';
 
 import Topbar from '@/components/navigation/topbar';
+import { useRef } from 'react';
+
 import { Mobbar } from '@/components/navigation/mobbar';
 
 const inter = Inter({
@@ -22,19 +24,18 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
 
-  const [landscape] = useMediaQuery('(min-width: 994px)', {
-    ssr: true,
-    fallback: false
-  });
+  const [landscape] = useMediaQuery('(min-width: 994px)');
+
+  const ref = useRef(null)
+  const isInView = useInView(ref)
 
   return (
-    <html lang="en">
-      <head />
+    <html lang="en" ref={ref}>
       <body className={inter.variable}>
         <ChakraProvider>
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: isInView ? 1 : 0 }}>
             <Topbar landscape={landscape} />
-            <Flex direction="column" paddingInline="3%">
+            <Flex direction="column" paddingInline="5%" pb="5%">
               {children}
             </Flex>
             {!landscape && <Mobbar />}

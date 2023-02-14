@@ -1,0 +1,36 @@
+.content h1 {
+  font-size: 4vh !important;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 3vh !important;
+}
+
+.content h2:nth-child(2) {
+  text-align: center;
+}
+
+.content h3 {
+  font-size: 2.4vh !important;
+  margin-top: 10px !important;
+}
+
+.content h1, .content h2, .content h3, .content h4 {
+  font-weight: 800 !important;
+}
+
+.content a {
+  color: lightseagreen;
+  text-decoration: underline;
+}
+
+.content li {
+  margin-top: 10px !important;
+  margin-left: 40px !important;
+}
+
+
+.content p {
+  padding-block: 5px;
+}
