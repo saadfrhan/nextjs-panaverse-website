@@ -1,6 +1,6 @@
 import { ItemProps } from '@/ts';
 import MotionDiv from '@/utils/motion';
-import { Flex, useMediaQuery } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 import HeadingBlock from './HeadingBlock';
 import NumberLabel from './NumberLabel';
 
@@ -11,26 +11,16 @@ const QuarterItem: React.FC<ItemProps> = ({
   isSpecialization = false,
 }) => {
 
-  const [isLandscape] = useMediaQuery('(min-width: 994px)', {
-    ssr: true,
-    fallback: false,
-  });
-
   return (
     <MotionDiv dimension="x" negInit={true} transition={{ type: 'tween' }}>
       <Flex
-        gap="3vw"
-        alignItems={isSpecialization ? "none" : "center"}
-        padding={isLandscape && !isSpecialization ? '4vh' : 0}
-        direction={isSpecialization ? 'column' : ['column', 'column', 'column', 'row']}
-        w="100%"
+        gap="1vw"
+        padding="4vh"
+        direction="column"
       >
-        {!isSpecialization && (
-          <NumberLabel
-            isLandscape={isLandscape}
-            number={number}
-          />
-        )}
+        <NumberLabel
+          number={number}
+        />
         <HeadingBlock
           description={description}
           heading={heading}

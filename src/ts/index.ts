@@ -29,6 +29,5 @@ export interface HeadingBlock {
 }
 
 export interface NumberLabel {
-  isLandscape: boolean,
   number: string
 }
