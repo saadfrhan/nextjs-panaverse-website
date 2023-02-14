@@ -20,3 +20,14 @@ export interface ItemProps {
   description?: string;
   isSpecialization?: boolean;
 }
+
+export interface HeadingBlock {
+  description?: string,
+  heading: string,
+  isSpecialization: boolean,
+  number?: string,
+}
+
+export interface NumberLabel {
+  number: string
+}
