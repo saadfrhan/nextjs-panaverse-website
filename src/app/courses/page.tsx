@@ -17,7 +17,7 @@ export default function Courses() {
       }} rounded={9} justifyContent="center" h="40vh" alignItems="center">
         <Heading>Core Courses</Heading>
       </Flex>
-      <Flex boxShadow="lg" bgColor="gray.700" _light={{
+      <Flex boxShadow="lg" onClick={() => push('/courses/specs')} cursor="pointer" bgColor="gray.700" _light={{
         bgColor: 'gray.200'
       }} rounded={9} justifyContent="center" h="40vh" alignItems="center">
         <Heading>Specializations</Heading>

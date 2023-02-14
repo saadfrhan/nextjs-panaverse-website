@@ -2,9 +2,11 @@
 
 import { core_courses, specs } from "@/constants/course"
 import {
-  Flex, Text, Box
+  Flex, Text, Box, useMediaQuery, Button, Icon, IconButton
 } from '@chakra-ui/react'
 import { useRouter } from 'next/navigation'
+import { useState } from 'react'
+import { TfiClose as CloseIcon } from 'react-icons/tfi'
 
 export default function Layout({
   children
@@ -14,43 +16,65 @@ export default function Layout({
 
   const { push } = useRouter();
 
-  function returnSlug(heading: string) {
-    return `/courses/${heading.toLowerCase().replaceAll(' ', '-').replace(':', '')}`
-  }
+  const [isLandscape] = useMediaQuery('(min-width: 1000px)');
+
+  const [show, isShow] = useState(false);
 
   return (
-    <Flex direction={['column', 'column', 'row', 'row']} gap={7}>
-      <Flex direction="column">
-        <Box as="span" flex='1' textAlign='left'>
+    <Flex direction={['column', 'column', 'column', 'row']} gap={7}>
+      {(isLandscape || show) && <Flex direction="column">
+        {!isLandscape && (
+          <IconButton
+            w={55} h={55}
+            rounded={9}
+            right={5}
+            color="white"
+            bg="transparent"
+            position="absolute"
+            onClick={() => isShow(!show)}
+            aria-label="close"
+            icon={<Icon as={CloseIcon} />}
+          />
+        )}
+        <Box as="span" textAlign='left'>
           Core Courses
         </Box>
-
         {core_courses.courses.map((c, i) =>
-          <Text pb={4} key={i} color='lightseagreen'
-            textDecoration='underline' onClick={() => push(returnSlug(c.heading))}>
+          <Text pb={1} listStyleType="bullet" key={i} color='lightseagreen'
+            _hover={{ textDecoration: 'underline' }} cursor='pointer' onClick={() => push(c.slug!)}>
             Quarter {c.number} {c.heading}
           </Text>)}
-
-        <Box as="span" flex='1' textAlign='left'>
+        <Box as="span" textAlign='left'>
           Specializations
         </Box>
 
         {specs.specializations.map((s, i) => (
           <Flex key={i} pl={3} direction="column" paddingBlock={1.5}>
-            <Box as="span" flex='1' textAlign='left'>
+            <Box as="span" textAlign='left'>
               {s.heading}
             </Box>
             {s.courses.map((c, i) => (
-              <Text key={i} cursor="pointer" color='lightseagreen'
-                textDecoration='underline' mb={1}
-                onClick={() => push(returnSlug(c.heading))}
+              <Text listStyleType="bullet" key={i} cursor="pointer" color='lightseagreen'
+                _hover={{ textDecoration: 'underline' }} mb={1}
+                onClick={() => push(c.slug)}
               >
                 Quarter {c.number}  {c.heading}
               </Text>
             ))}
           </Flex>
         ))}
-      </Flex>
+
+      </Flex>}
+      {!isLandscape && <Button
+        position="fixed"
+        right={5}
+        onClick={() => isShow(!show)}
+        bottom={5}
+        gap={4}
+        z-index={1}
+      >
+        Courses Menu
+      </Button>}
       {children}
     </Flex>
   )
