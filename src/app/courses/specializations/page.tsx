@@ -11,7 +11,7 @@ export default function Specs() {
   const { push } = useRouter()
 
   return (<Flex direction="column" gap="1vw">
-    <Heading size="xl">Specializations</Heading>
+    <Heading size={["xl", "2xl", "2xl", "3xl"]}>Specializations</Heading>
     <MotionDiv negInit={true} dimension="y" transition={{ type: "spring", stiffness: 100 }}>
       <SimpleGrid columns={[1, 1, 2, 2, 3]} spacing={5}
       >
