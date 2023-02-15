@@ -25,7 +25,7 @@ export default function CourseContainer({
         pt={10}
         element={
           <Flex direction="column" gap={3}>
-            <Heading size={["lg", "xl", "lg", "2xl"]}>
+            <Heading size={["lg", "lg", "lg", "2xl"]}>
               {heading}
             </Heading>
             <Text>{description}</Text>
