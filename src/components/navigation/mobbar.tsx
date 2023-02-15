@@ -13,12 +13,19 @@ export const Mobbar = () => {
 
   const [close, isClose] = useState(true)
 
-  return (
+  return (<div>
+    <br />
+    <br />
+    <br />
     <Flex
       position="fixed"
       direction="row"
       justifyContent="space-evenly"
-      bottom={5}
+      bottom={0}
+      bgColor="white"
+      _dark={{
+        bgColor: "gray.700"
+      }}
       w="100%"
       gap={4}
       z-index={1}
@@ -28,6 +35,7 @@ export const Mobbar = () => {
           w={55} h={55}
           rounded={9}
           display="flex"
+          bg="transparent"
           aria-label="home"
           icon={<Icon as={HomeIcon} />}
         />
@@ -37,17 +45,19 @@ export const Mobbar = () => {
           display="flex"
           rounded={9}
           w={55} h={55}
+          bg="transparent"
           aria-label="home"
           icon={<Icon as={CourseIcon} />}
         >Courses</IconButton>
       </Link>
       <IconButton
         w={55} h={55}
+        bg="transparent"
         rounded={9}
         onClick={() => isClose(!close)}
         aria-label="home"
         icon={<Icon as={close ? MenuIcon : CloseIcon} />}
       />
     </Flex>
-  )
+  </div>)
 }

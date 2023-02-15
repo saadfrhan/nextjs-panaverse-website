@@ -40,8 +40,8 @@ export default function Home() {
 
     <Container
       element={<MotionDiv negInit={true} dimension="y">
-        <Flex direction={['column', 'column', 'column', 'row']}>
-          <Image src={ZiaKhanImage} alt="Zia Khan" />
+        <Flex direction={['column', 'column', 'column', 'column', 'row']} justifyContent="space-between">
+          <Image src={ZiaKhanImage} alt="Zia Khan" className="ziaimage" />
           <Flex direction="column" bgColor="gray.200" _dark={{
             bgColor: "gray.700"
           }} rounded={9} p='4%'>
@@ -67,11 +67,11 @@ export default function Home() {
           </Text>
         </MotionDiv>
         <SimpleGrid columns={[1, 1, 2, 2, 2]} spacing={10}>
-          <Flex direction="column" gap={8}>
+          <Flex direction="column" gap={8} justifyContent="center" alignItems="center">
             <Image src={KarachiImage} alt="karachi" className="city" />
             <Image src={IslamabadImage} alt="islamabad" className="city" />
           </Flex>
-          <Flex direction="column" gap={8}>
+          <Flex direction="column" gap={8} justifyContent="center" alignItems="center">
             <Image src={PeshawarImage} alt="peshawar" className="city" />
             <Image src={LahoreImage} alt="lahore" className="city" />
           </Flex>
@@ -97,7 +97,6 @@ export default function Home() {
     <Container
       element={<MotionDiv negInit={true} dimension="y">
         <Flex direction={['column', 'column', 'column', 'row']} gap={6}>
-          <Image src={ManOnBooks} alt="Man on books" />
           <Flex direction="column" bgColor="gray.200" _dark={{
             bgColor: "gray.700"
           }} rounded={9} p="8%">

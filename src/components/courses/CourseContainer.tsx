@@ -2,6 +2,7 @@
 
 import QuarterItem from '@/components/courses/QuarterItem';
 import Container from '@/components/home/container';
+import { gradientBg } from '@/constants/home';
 import { Flex, Heading, SimpleGrid, Text } from '@chakra-ui/react'
 
 export default function CourseContainer({
@@ -21,11 +22,13 @@ export default function CourseContainer({
   return (
     <Flex direction="column" gap={6}>
       <Container
-        pl={10}
-        pt={10}
+        bg={gradientBg}
+        p={5}
+        color="white"
+        rounded={9}
         element={
           <Flex direction="column" gap={3}>
-            <Heading size={["md", "lg", "lg", "2xl"]}>
+            <Heading size={["md", "lg", "lg", "xl"]}>
               {heading}
             </Heading>
             <Text>{description}</Text>
