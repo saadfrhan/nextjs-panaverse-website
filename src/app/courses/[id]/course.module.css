@@ -1,14 +1,14 @@
 .content h1 {
-  font-size: 4vw !important;
+  font-size: 4vh !important;
 }
 
 .content h2 {
-  font-size: 3vw !important;
+  font-size: 3vh !important;
 }
 
 .content h3 {
-  font-size: 3vw !important;
-  margin-top: 10px !important;
+  font-size: 2vh !important;
+  margin-top: 5px !important;
 }
 
 .content h1, .content h2, .content h3, .content h4 {
@@ -28,4 +28,26 @@
 
 .content p {
   margin-block: 5px;
+}
+
+.content {
+  width: 100% !important;
+}
+
+@media screen and (resolution: landscape) {
+  .content {
+    width: 70% !important;
+  }
+
+  .content h1 {
+    font-size: 8vh !important;
+  }
+
+  .content h2 {
+    font-size: 6vh !important;
+  }
+
+  .content h3 {
+    font-size: 4vh !important;
+  }
 }
