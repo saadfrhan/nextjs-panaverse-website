@@ -17,3 +17,7 @@ img {
   width: 50vh !important;
   height: 50vh !important;
 }
+
+.hide {
+  display: none !important;
+}

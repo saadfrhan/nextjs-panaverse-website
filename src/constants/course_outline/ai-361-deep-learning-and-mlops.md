@@ -1,4 +1,4 @@
-# <ins>Artificial Intelligence (AI) and Deep Learning Specialization</ins>
+# Artificial Intelligence (AI) and Deep Learning Specialization
 
 ## Quarter V
 
@@ -6,11 +6,11 @@
 
 Duration: 13 Weeks
 
-##### <ins>Course Description</ins>
+##### Course Description
 
 This course will help you understand the capabilities, challenges, and consequences of deep learning and prepare you to participate in the development of leading-edge AI technology. We will finish the program by learning how to envision, create, and maintain integrated systems that run constantly in production. Production systems must manage constantly changing data, in stark contrast to typical machine learning modeling. The production system must also operate continuously at the lowest possible cost while delivering the highest possible performance.
 
-## <ins>Course Outline</ins>
+## Course Outline
 
 1. Deep Learning with Tensorflow
 

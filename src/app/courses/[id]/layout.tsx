@@ -41,7 +41,7 @@ export default function Layout({
         </Box>
         {core_courses.courses.map((c, i) =>
           <Text pb={1} listStyleType="bullet" key={i} color='lightseagreen'
-            _hover={{ textDecoration: 'underline' }} cursor='pointer' onClick={() => push(c.slug!)}>
+            _hover={{ textDecoration: 'underline' }} cursor='pointer' onClick={() => push(c.slug)}>
             Quarter {c.number} {c.heading}
           </Text>)}
         <Box as="span" textAlign='left'>
@@ -56,7 +56,7 @@ export default function Layout({
             {s.courses.map((c, i) => (
               <Text listStyleType="bullet" key={i} cursor="pointer" color='lightseagreen'
                 _hover={{ textDecoration: 'underline' }} mb={1}
-                onClick={() => push(c.slug)}
+                onClick={() => push(`/courses/${c.slug}`)}
               >
                 Quarter {c.number}  {c.heading}
               </Text>

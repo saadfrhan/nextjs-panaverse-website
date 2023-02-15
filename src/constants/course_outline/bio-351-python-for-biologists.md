@@ -1,4 +1,4 @@
-# <ins>Genomics and Bioinformatics Specialization</ins>
+# Genomics and Bioinformatics Specialization
 
 ## Quarter IV
 
@@ -6,7 +6,7 @@
 
 Duration: 13 Weeks
 
-#### <ins>Course Description</ins>
+#### Course Description
 
 This course will focus on learning the basics of the Python programming language through genomics examples.
 

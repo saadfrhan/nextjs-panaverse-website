@@ -1,4 +1,4 @@
-# <ins>Network Programmability and Automation Specialization</ins>
+# Network Programmability and Automation Specialization
 
 ## Quarter IV
 
@@ -6,7 +6,7 @@
 
 Duration: 13 Weeks
 
-#### <ins>Course Description</ins> 
+#### Course Description 
 
 This course will focus on learning the basics of the networking and preparing for the new Cisco Certified Network Associate (CCNA) exam. This comprehensive course focuses on the solutions and technologies needed to implement and administer a broad range of modern networking and IT infrastructure.
 

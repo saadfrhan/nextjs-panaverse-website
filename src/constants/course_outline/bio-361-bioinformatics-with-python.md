@@ -1,4 +1,4 @@
-# <ins>Genomics and Bioinformatics Specialization</ins>
+# Genomics and Bioinformatics Specialization
 
 ## Quarter V
 
@@ -6,7 +6,7 @@
 
 Duration: 13 Weeks
 
-#### <ins>Course Description</ins>
+#### Course Description
 
 In this course we will discover modern, next-generation sequencing libraries from the powerful Python ecosystem to perform cutting-edge research and analyze large amounts of biological data.
 

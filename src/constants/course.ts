@@ -13,7 +13,8 @@ export const core_courses = {
     },
     {
       number: "III",
-      heading: `W3-351: Developing Smart Contracts and Planet-Scale Web 3.0 Dapps`
+      heading: `W3-351: Developing Smart Contracts and Planet-Scale Web 3.0 Dapps`,
+      slug: "/courses/w3-351-developing-smart-contracts-and-planet-scale-web-3.0-dapps"
     }
   ]
 }
@@ -38,12 +39,12 @@ export const specs = {
     courses: [{
       number: "IV",
       heading: `W3-351: Developing Smart Contracts and Planet-Scale Web 3.0 Dapps`,
-      slug: "/courses/w3-351-developing-smart-contracts-and-planet-scale-web-3.0-dapps"
+      slug: "w3-351-developing-smart-contracts-and-planet-scale-web-3.0-dapps"
     },
     {
       number: "V",
       heading: `MV-361: Developing Planet-Scale Open Virtual and Augmented Metaverse Experiences`,
-      slug: "/courses/mv-361-developing-planet-scale-open-virtual-and-augmented-metaverse-experiences"
+      slug: "mv-361-developing-planet-scale-open-virtual-and-augmented-metaverse-experiences"
     }]
   },
   {
@@ -53,12 +54,12 @@ export const specs = {
     courses: [{
       number: "IV",
       heading: `AI-351: Developing Planet-Scale Intelligent APIs and Python Programming`,
-      slug: "/courses/ai-351-developing-planet-scale-intelligent-apis-and-python-programming"
+      slug: "ai-351-developing-planet-scale-intelligent-apis-and-python-programming"
     },
     {
       number: "V",
       heading: `AI-361: Deep Learning and MLOps`,
-      slug: "/courses/ai-361-deep-learning-and-mlops"
+      slug: "ai-361-deep-learning-and-mlops"
     }]
   },
   {
@@ -68,12 +69,12 @@ export const specs = {
     courses: [{
       number: "IV",
       heading: `CN-351: Certified Kubernetes Application Developer (CKAD)`,
-      slug: "/courses/cn-351-certified-kubernetes-application-developer-(ckad)"
+      slug: "cn-351-certified-kubernetes-application-developer-(ckad)"
     },
     {
       number: "V",
       heading: `CN-361: Developing Multi-Cloud APIs using CDK for Terraform`,
-      slug: "/courses/cn-361-developing-multi-cloud-apis-using-cdk-for-terraform"
+      slug: "cn-361-developing-multi-cloud-apis-using-cdk-for-terraform"
     }]
   },
   {
@@ -83,12 +84,12 @@ export const specs = {
     courses: [{
       number: "IV",
       heading: `AC-351: Ambient Computing with Voice Assistants and Matter Protocol Devices`,
-      slug: "/courses/ac-351-ambient-computing-with-voice-assistants-and-matter-protocol-devices"
+      slug: "ac-351-ambient-computing-with-voice-assistants-and-matter-protocol-devices"
     },
     {
       number: "V",
       heading: `AC-361: Embedded Programming using C and Rust`,
-      slug: "/courses/ac-361-embedded-programming-using-c-and-rust"
+      slug: "ac-361-embedded-programming-using-c-and-rust"
     }]
   },
   {
@@ -98,12 +99,12 @@ export const specs = {
     courses: [{
       number: "IV",
       heading: `Bio-351: Python for Biologists`,
-      slug: "/courses/bio-351-python-for-biologists"
+      slug: "bio-351-python-for-biologists"
     },
     {
       number: "V",
       heading: `Bio-361: Bioinformatics with Python`,
-      slug: "/courses/bio-361-bioinformatics-with-python"
+      slug: "bio-361-bioinformatics-with-python"
     }]
   },
   {
@@ -113,12 +114,12 @@ export const specs = {
     courses: [{
       number: "IV",
       heading: `NPA-351: CCNA 200-301 Certification`,
-      slug: "/courses/npa-351-ccna-200-301-certification"
+      slug: "npa-351-ccna-200-301-certification"
     },
     {
       number: "V",
       heading: `NPA-361: Network Programmability and Automation`,
-      slug: "/courses/npa-361-network-programmability-and-automation"
+      slug: "npa-361-network-programmability-and-automation"
     }]
   }]
 }

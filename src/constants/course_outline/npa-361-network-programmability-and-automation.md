@@ -1,4 +1,4 @@
-# <ins>Network Programmability and Automation Specialization</ins>
+# Network Programmability and Automation Specialization
 
 ## Quarter V
 
@@ -6,7 +6,7 @@
 
 Duration: 13 Weeks
 
-#### <ins>Course Description</ins> 
+#### Course Description 
 
 Traditional network management techniques can't be effectively automated and don't scale well. By implementing network programmability based on Application Programming Interfaces, this course will assist in overcoming issues of the future and help you develop the skills required for the Next-Generation Network Engineer.
 

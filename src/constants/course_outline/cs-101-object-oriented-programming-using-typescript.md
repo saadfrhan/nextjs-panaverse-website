@@ -4,11 +4,11 @@
 
 Duration: 13 Weeks
 
-##### <ins>Course Description</ins>
+##### Course Description
 
 We will start the program by learning the fundamentals of Object-Oriented programming using JavaScript and TypeScript. We will also understand the latest Web trends i.e. Web 3.0 and Metaverse concepts and try to understand their working from the perspective of the users.
 
-## <ins>Course Outline</ins>
+## Course Outline
 
 ### HTML and CSS (Homework)
 

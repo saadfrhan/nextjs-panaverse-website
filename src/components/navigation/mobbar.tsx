@@ -3,12 +3,11 @@
 import { Flex, IconButton, Icon } from '@chakra-ui/react'
 import Link from 'next/link';
 import React, { useState } from 'react'
-import {
-  AiFillHome as HomeIcon,
-  AiFillBook as CourseIcon,
-  AiOutlineMenu as MenuIcon,
-  AiOutlineClose as CloseIcon
-} from 'react-icons/ai';
+import { AiOutlineMenu as MenuIcon } from 'react-icons/ai';
+import { TfiClose as CloseIcon } from 'react-icons/tfi'
+import { BsBook as CourseIcon } from 'react-icons/bs'
+import { BiHomeAlt as HomeIcon } from 'react-icons/bi'
+
 
 export const Mobbar = () => {
 
@@ -17,29 +16,29 @@ export const Mobbar = () => {
   return (
     <Flex
       position="fixed"
-      direction="column"
-      justifyContent="flex-start"
-      left={5}
+      direction="row"
+      justifyContent="space-evenly"
       bottom={5}
+      w="100%"
       gap={4}
       z-index={1}
     >
-      <Link href="/" prefetch={false}>
+      <Link href="/" prefetch={false} className={close ? "hide" : "show"}>
         <IconButton
           w={55} h={55}
           rounded={9}
-          display={close ? 'none' : 'flex'}
+          display="flex"
           aria-label="home"
           icon={<Icon as={HomeIcon} />}
         />
       </Link>
-      <Link href="/courses" prefetch={false}>
+      <Link href="/courses" prefetch={false} className={close ? "hide" : "show"}>
         <IconButton
-          display={close ? 'none' : 'flex'}
+          display="flex"
           rounded={9}
           w={55} h={55}
           aria-label="home"
-          icon={<Icon as={CourseIcon} w={70} />}
+          icon={<Icon as={CourseIcon} />}
         >Courses</IconButton>
       </Link>
       <IconButton

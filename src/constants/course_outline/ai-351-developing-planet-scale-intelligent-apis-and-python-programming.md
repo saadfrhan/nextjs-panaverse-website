@@ -1,4 +1,4 @@
-# <ins>Artificial Intelligence (AI) and Deep Learning Specialization</ins>
+# Artificial Intelligence (AI) and Deep Learning Specialization
 
 ## Quarter IV
 
@@ -6,7 +6,7 @@
 
 Duration: 13 Weeks
 
-##### <ins>Course Description</ins>
+##### Course Description
 
 Artificial intelligence is the simulation of human intelligence processes by machines, especially computer systems. The AI and Deep Learning Specialization is a foundational program that will aid in your comprehension of deep learning's potential, difficulties, and effects as well as equip you to take part in the creation of cutting-edge AI technology.
 
@@ -14,7 +14,7 @@ We will start this course by understanding the fundamentals and use cases for AI
 
 We'll conclude the course by learning about basic programming concepts using Python, such as lists, dictionaries, classes, functions, and loops, and practice writing clean and readable code with exercises for each topic. We'll also learn how to make your programs interactive and how to test your code safely before adding it to a project. It is a fast-paced, thorough introduction to programming with Python 3.10+ that will have you writing programs, solving problems, and making things that work in no time. In this quarter we will also learn Git, the distributed version control system. We will also review Git-based GitHub services.
 
-## <ins>Course Outline</ins>
+## Course Outline
 
 Introduction to Machine Learning, Data Science, and AI
 
