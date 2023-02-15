@@ -27,8 +27,8 @@ export default function Layout({
           <IconButton
             w={55} h={55}
             rounded={9}
+            pb={10}
             right={5}
-            color="white"
             bg="transparent"
             position="absolute"
             onClick={() => isShow(!show)}
