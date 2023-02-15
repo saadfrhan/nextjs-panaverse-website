@@ -27,7 +27,7 @@ export default function CourseContainer({
         color="white"
         rounded={9}
         element={
-          <Flex direction="column" gap={3}>
+          <Flex direction="column">
             <Heading size={["md", "lg", "lg", "xl"]}>
               {heading}
             </Heading>
