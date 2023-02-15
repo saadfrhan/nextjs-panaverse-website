@@ -66,12 +66,7 @@ export default function Layout({
 
       </Flex>}
       {!isLandscape && <Button
-        position="fixed"
-        right={5}
         onClick={() => isShow(!show)}
-        bottom={5}
-        gap={4}
-        z-index={1}
       >
         Courses Menu
       </Button>}
