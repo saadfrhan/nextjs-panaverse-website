@@ -15,11 +15,14 @@ export default function Specs() {
     <MotionDiv negInit={true} dimension="y" transition={{ type: "spring", stiffness: 100 }}>
       <SimpleGrid columns={[1, 1, 2, 2, 3]} spacing={5}
       >
-        {specs.specializations.map((s, i) => <Flex key={i} boxShadow="lg" bgColor="gray.700" cursor="pointer" onClick={() => push(`/courses/specializations/${s.heading.toLowerCase().replaceAll(' ', '-')}`)} _light={{
-          bgColor: 'gray.200'
-        }} rounded={9} justifyContent="center" h="40vh" alignItems="center">
-          <Heading textAlign="center" size="md" p={10}>{s.heading}</Heading>
-        </Flex>)}
+        {specs.specializations.map((s, i) => {
+          const id = specs.specializations.findIndex(i => i.heading.toLowerCase().replaceAll(' ', '-') === s.heading.toLowerCase().replaceAll(' ', '-'));
+          return (<Flex key={i} boxShadow="lg" bgColor="gray.700" cursor="pointer" onClick={() => push(`/courses/specializations/${id}`)} _light={{
+            bgColor: 'gray.200'
+          }} rounded={9} justifyContent="center" h="40vh" alignItems="center">
+            <Heading textAlign="center" size="md" p={10}>{s.heading}</Heading>
+          </Flex>)
+        })}
       </SimpleGrid>
     </MotionDiv>
   </Flex>
