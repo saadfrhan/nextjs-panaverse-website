@@ -12,7 +12,7 @@ export default function Container({
   [key: string]: any
 }) {
   return (
-    <Flex bgImage={bg} width="100%" {...props} direction={['column', 'column', 'column', 'row']} justifyContent="center">
+    <Flex bgImage={bg} width="100%" {...props} direction={['column', 'column', 'column', 'row']}>
       {element && element}
     </Flex>
   )
