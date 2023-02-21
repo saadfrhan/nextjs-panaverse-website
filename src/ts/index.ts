@@ -7,7 +7,7 @@ export interface ItemProps {
   heading: string;
   description?: string;
   isSpecialization?: boolean;
-  image: StaticImageData
+  image?: StaticImageData
 }
 
 export interface HeadingBlock {
