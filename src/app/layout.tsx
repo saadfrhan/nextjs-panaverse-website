@@ -11,8 +11,6 @@ import { useMediaQuery } from '@chakra-ui/react';
 import Topbar from '@/components/navigation/topbar';
 import { useRef } from 'react';
 
-import { Mobbar } from '@/components/navigation/mobbar';
-
 const inter = Inter({
   variable: '--inter-font',
   subsets: ['latin']
@@ -24,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
 
-  const [landscape] = useMediaQuery('(min-width: 994px)');
+  const [landscape] = useMediaQuery('(min-width: 767px)');
 
   const ref = useRef(null)
   const isInView = useInView(ref)
@@ -34,11 +32,10 @@ export default function RootLayout({
       <body className={inter.variable}>
         <ChakraProvider>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: isInView ? 1 : 0 }}>
-            <Topbar landscape={landscape} />
-            <Flex direction="column" paddingInline="5%" pb="5%">
+            <Flex paddingBlock="2%" paddingInline="5%" direction="column" gap={3}>
+              <Topbar landscape={landscape} />
               {children}
             </Flex>
-            {!landscape && <Mobbar />}
           </motion.div>
         </ChakraProvider>
       </body>

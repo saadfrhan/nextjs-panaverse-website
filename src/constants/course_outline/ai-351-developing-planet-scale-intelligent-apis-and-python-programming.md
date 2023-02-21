@@ -6,7 +6,7 @@
 
 Duration: 13 Weeks
 
-##### Course Description
+### Course Description
 
 Artificial intelligence is the simulation of human intelligence processes by machines, especially computer systems. The AI and Deep Learning Specialization is a foundational program that will aid in your comprehension of deep learning's potential, difficulties, and effects as well as equip you to take part in the creation of cutting-edge AI technology.
 

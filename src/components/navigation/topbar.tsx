@@ -1,42 +1,36 @@
-import { Button, Flex, IconButton, useColorMode, Icon } from '@chakra-ui/react'
+import { Flex } from '@chakra-ui/react'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 import Panaverse from '../../images/panaverse.png';
-import { MdDarkMode, MdLightMode } from 'react-icons/md';
 import styles from './topbar.module.css'
+import { Mobbar, NavBtns, NavIconBtn } from './mobbar';
+import Darkmode from './darkmode';
+import { BsBook as CourseIcon } from 'react-icons/bs'
+import { BiHomeAlt as HomeIcon } from 'react-icons/bi'
 
 export default function Topbar({ landscape }: { landscape: boolean }) {
 
-  const { colorMode, toggleColorMode } = useColorMode();
+  const [close, isClose] = useState(true);
 
-  return (
-    <Flex paddingBlock={5} paddingInline="5%" alignContent="center" alignItems="center" justifyContent="space-between">
+  return (<Flex direction="column" gap={3}>
+    <Flex alignContent="center" alignItems="center" justifyContent="space-between" w="100%">
       <Flex>
         <Link href="/">
           <Image alt="panaverse" src={Panaverse} className={styles.navpv} />
         </Link>
         {landscape &&
           <Flex gap={6} alignItems="center">
-            <Link href="/">
-              <Button>
-                Home
-              </Button>
-            </Link>
-            <Link href="/courses">
-              <Button>
-                Courses
-              </Button>
-            </Link>
+            <NavBtns />
           </Flex>}
       </Flex>
-      <IconButton
-        w={55} h={55}
-        alignSelf="flex-end"
-        aria-label="toggle-mode"
-        icon={<Icon as={colorMode === "dark" ? MdDarkMode : MdLightMode} />}
-        onClick={toggleColorMode}
-      />
+      {!landscape && <Mobbar close={close} isClose={isClose} />}
+      {landscape && <Darkmode />}
     </Flex>
-  )
+    {!landscape && <Flex direction="column" gap={3}
+      display={close ? "none" : "flex"}
+    >
+      <NavBtns />
+    </Flex>}
+  </Flex>)
 }

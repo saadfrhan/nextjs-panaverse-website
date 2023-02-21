@@ -10,12 +10,11 @@ import KarachiImage from '../images/karachi.jpg';
 import PeshawarImage from '../images/peshawar.jpg';
 import LahoreImage from '../images/lahore.jpg';
 import IslamabadImage from '../images/islamabad.jpg';
-import ManOnBooks from '../images/manonbooks.gif';
 import Outcome from '../images/money.png';
 
 export default function Home() {
 
-  const [isLandscape] = useMediaQuery('(min-width: 1000px)');
+  const [isLandscape] = useMediaQuery('(min-width: 767px)');
 
   return (<Flex direction="column" gap="4rem">
     <Container
@@ -27,11 +26,13 @@ export default function Home() {
           <MotionDiv negInit={true} dimension="y" transition={{ type: "spring", stiffness: 100 }}>
             <Heading fontWeight="extrabold" size={["lg", "xl"]} mb={4}>
               {home[0].heads?.first!}
+              <br />
+              {home[0].heads?.second!}
             </Heading>
           </MotionDiv>
           <MotionDiv negInit={true} dimension="x">
             <Heading size="1xl">
-              {home[0].heads?.second}
+              {home[0].heads?.third}
             </Heading>
           </MotionDiv>
         </Flex>
@@ -40,17 +41,14 @@ export default function Home() {
 
     <Container
       element={<MotionDiv negInit={true} dimension="y">
-        <Flex direction={['column', 'column', 'column', 'column', 'row']} justifyContent="space-between">
-          <Image src={ZiaKhanImage} alt="Zia Khan" className="ziaimage" />
-          <Flex direction="column" bgColor="gray.200" _dark={{
-            bgColor: "gray.700"
-          }} rounded={9} p='4%'>
-            <Heading
-              mb={3} size={["md", "xl", "lg", "xl"]}>
-              {home[1].quote?.text}
-            </Heading>
-            <Text fontStyle="italic">{home[1].quote?.author}</Text>
-          </Flex>
+        <Flex direction="column" bgColor="gray.100" _dark={{
+          bgColor: "gray.700"
+        }} rounded={9} alignItems="center" p={10}>
+          <Heading
+            mb={3} size={["md", "lg", "md", "lg"]}>
+            {home[1].quote?.text}
+          </Heading>
+          <Text fontStyle="italic">{home[1].quote?.author}</Text>
         </Flex>
       </MotionDiv>
       }
@@ -69,11 +67,11 @@ export default function Home() {
         <SimpleGrid columns={[1, 1, 2, 2, 2]} spacing={10}>
           <Flex direction="column" gap={8} justifyContent="center" alignItems="center">
             <Image src={KarachiImage} alt="karachi" className="city" />
-            <Image src={IslamabadImage} alt="islamabad" className="city" />
+            <Image src={LahoreImage} alt="lahore" className="city" />
           </Flex>
           <Flex direction="column" gap={8} justifyContent="center" alignItems="center">
             <Image src={PeshawarImage} alt="peshawar" className="city" />
-            <Image src={LahoreImage} alt="lahore" className="city" />
+            <Image src={IslamabadImage} alt="islamabad" className="city" />
           </Flex>
         </SimpleGrid>
       </SimpleGrid>

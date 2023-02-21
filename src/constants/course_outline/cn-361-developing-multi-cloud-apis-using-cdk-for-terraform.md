@@ -6,7 +6,7 @@
 
 Duration: 13 Weeks
 
-##### Course Description
+### Course Description
 
 Terraform lets you use the same workflow to manage multiple providers and handle cross-cloud dependencies. This simplifies management and orchestration for large-scale, multi-cloud infrastructures.
 

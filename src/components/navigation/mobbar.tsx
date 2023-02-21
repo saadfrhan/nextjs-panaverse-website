@@ -1,63 +1,69 @@
 "use client";
 
-import { Flex, IconButton, Icon } from '@chakra-ui/react'
-import Link from 'next/link';
-import React, { useState } from 'react'
+import { Flex, IconButton, Icon, Button } from '@chakra-ui/react'
 import { AiOutlineMenu as MenuIcon } from 'react-icons/ai';
 import { TfiClose as CloseIcon } from 'react-icons/tfi'
 import { BsBook as CourseIcon } from 'react-icons/bs'
 import { BiHomeAlt as HomeIcon } from 'react-icons/bi'
+import { useRouter } from 'next/navigation';
+import Darkmode from './darkmode';
 
 
-export const Mobbar = () => {
-
-  const [close, isClose] = useState(true)
-
-  return (<div>
-    <br />
-    <br />
-    <br />
-    <Flex
-      position="fixed"
-      direction="row"
-      justifyContent="space-evenly"
-      bottom={0}
-      bgColor="white"
-      _dark={{
-        bgColor: "gray.700"
-      }}
-      w="100%"
-      gap={4}
-      z-index={1}
-    >
-      <Link href="/" prefetch={false} className={close ? "hide" : "show"}>
-        <IconButton
-          w={55} h={55}
-          rounded={9}
-          display="flex"
-          bg="transparent"
-          aria-label="home"
-          icon={<Icon as={HomeIcon} />}
-        />
-      </Link>
-      <Link href="/courses" prefetch={false} className={close ? "hide" : "show"}>
-        <IconButton
-          display="flex"
-          rounded={9}
-          w={55} h={55}
-          bg="transparent"
-          aria-label="home"
-          icon={<Icon as={CourseIcon} />}
-        >Courses</IconButton>
-      </Link>
+export const Mobbar = (
+  { close, isClose }:
+    { close: boolean, isClose: Function }
+) => {
+  return (
+    <Flex gap={3}>
       <IconButton
         w={55} h={55}
-        bg="transparent"
         rounded={9}
         onClick={() => isClose(!close)}
         aria-label="home"
         icon={<Icon as={close ? MenuIcon : CloseIcon} />}
       />
+      <Darkmode />
     </Flex>
-  </div>)
+  )
+}
+
+export function NavBtns() {
+  return <>{
+    [{
+      arialabel: 'Home',
+      icon: HomeIcon,
+      route: '/'
+    }, {
+      arialabel: 'Courses',
+      icon: CourseIcon,
+      route: '/courses'
+    }].map((item, idx) => (
+      <NavIconBtn
+        key={idx}
+        arialabel={item.arialabel}
+        icon={item.icon}
+        route={item.route}
+      />
+    ))
+  }</>
+}
+
+export function NavIconBtn({
+  icon,
+  route,
+  arialabel
+}: {
+  icon: any,
+  route: string,
+  arialabel: string
+}) {
+  const { push } = useRouter();
+  return (
+    <Button
+      onClick={() => push(route)}
+      leftIcon={<Icon as={icon} />}
+    >
+      {arialabel}
+    </Button>
+  )
 }

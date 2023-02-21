@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, Transition } from "framer-motion";
 
 export default function MotionDiv({
   children,
@@ -9,10 +9,7 @@ export default function MotionDiv({
   children: React.ReactNode,
   dimension: 'x' | 'y',
   negInit?: boolean,
-  transition?: {
-    type: string,
-    stiffness?: number
-  }
+  transition?: Transition
 }) {
   return (
     <motion.div initial={{

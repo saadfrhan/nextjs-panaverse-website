@@ -5,9 +5,9 @@ export const shadowColor = "rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 
 export const home = [
   {
     heads: {
-      first: `Certified Web 3.0 and Metaverse Developer:  
-      A Nationwide Program in Karachi, Lahore, Islamabad, and Peshawar`,
-      second: "Getting Ready for the Next Generation and Future of the Internet - Join a 13 Trillion Dollar Industry with 5 Billion Users"
+      first: `Certified Web 3.0 and Metaverse Developer:`,
+      second: `A Nationwide Program in Karachi, Lahore, Islamabad, and Peshawar`,
+      third: "Getting Ready for the Next Generation and Future of the Internet - Join a 13 Trillion Dollar Industry with 5 Billion Users"
     }
   },
   {

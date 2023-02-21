@@ -1,20 +1,27 @@
+import QuarterOneImage from '../images/q01.png';
+import QuarterTwoImage from '../images/q02.png';
+import QuarterThreeImage from '../images/q03.png';
+
 export const core_courses = {
   description: `Every participant of the program will start by completing the following three core courses:`,
   courses: [
     {
       number: "I",
       heading: "CS-101: Object-Oriented Programming using TypeScript",
-      slug: "/courses/cs-101-object-oriented-programming-using-typescript"
+      slug: "/courses/cs-101-object-oriented-programming-using-typescript",
+      image: QuarterOneImage
     },
     {
       number: "II",
       heading: `W2-201: Developing Planet-Scale Web 2.0 Serverless Cloud Cloud Apps and APIs using Next.js 13 and Cloud Development Kit (CDK) for Terraform`,
-      slug: "/courses/w2-201-developing-planet-scale-web-2.0-serverless-cloud-cloud-apps-and-apis-using-next.js-13-and-cloud-development-kit-(cdk)-for-terraform"
+      slug: "/courses/w2-201-developing-planet-scale-web-2.0-serverless-cloud-cloud-apps-and-apis-using-next.js-13-and-cloud-development-kit-(cdk)-for-terraform",
+      image: QuarterTwoImage
     },
     {
       number: "III",
       heading: `W3-351: Developing Smart Contracts and Planet-Scale Web 3.0 Dapps`,
-      slug: "/courses/w3-351-developing-smart-contracts-and-planet-scale-web-3.0-dapps"
+      slug: "/courses/w3-351-developing-smart-contracts-and-planet-scale-web-3.0-dapps",
+      image: QuarterThreeImage
     }
   ]
 }

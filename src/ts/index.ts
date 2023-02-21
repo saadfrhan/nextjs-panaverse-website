@@ -1,24 +1,13 @@
-export type Heads = "Specialized Tracks" | "Core Courses"
+import { StaticImageData } from "next/image";
 
-export type Item = {
-  [key in Heads]: {
-    main?: string;
-    mainDesc?: string;
-    number: string;
-    heading: string;
-    description: string;
-    courses?: {
-      number: string;
-      heading: string;
-    }[];
-  }[];
-};
+export type Heads = "Specialized Tracks" | "Core Courses"
 
 export interface ItemProps {
   number: string;
   heading: string;
   description?: string;
   isSpecialization?: boolean;
+  image: StaticImageData
 }
 
 export interface HeadingBlock {
