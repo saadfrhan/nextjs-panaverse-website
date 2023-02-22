@@ -53,9 +53,9 @@ export default function Home() {
     />
 
     <Container
-      element={<SimpleGrid columns={[1, 1, 2, 2, 2]} spacing={5}>
+      element={<SimpleGrid columns={[1, 1, 2, 2, 2]} spacing={5} justifyContent="center" alignItems="center">
         <MotionDiv transition={{ type: "tween" }} dimension="y">
-          <Flex p={5} direction="column">
+          <Flex direction="column" p={6}>
             <Heading mb={3}>
               {home[2].info?.head}
             </Heading>
@@ -64,8 +64,8 @@ export default function Home() {
             </Text>
           </Flex>
         </MotionDiv>
-        <SimpleGrid columns={[1, 1, 2, 2, 2]} spacing={4}>
-          <Flex direction="column" gap={4} justifyContent="center" alignItems="center">
+        <SimpleGrid columns={[1, 1, 2, 2, 2]} spacing={2}>
+          <Flex direction="column" gap={2} justifyContent="center" alignItems="center">
             <MotionDiv transition={{ type: "tween" }} dimension="x">
               <Image src={KarachiImage} alt="karachi" className="city" />
             </MotionDiv>
@@ -73,7 +73,7 @@ export default function Home() {
               <Image src={LahoreImage} alt="lahore" className="city" />
             </MotionDiv>
           </Flex>
-          <Flex direction="column" gap={4} justifyContent="center" alignItems="center">
+          <Flex direction="column" gap={2} justifyContent="center" alignItems="center">
             <MotionDiv transition={{ type: "tween" }} dimension="x">
               <Image src={PeshawarImage} alt="peshawar" className="city" />
             </MotionDiv>

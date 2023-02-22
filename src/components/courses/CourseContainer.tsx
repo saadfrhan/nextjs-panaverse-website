@@ -21,7 +21,7 @@ export default function CourseContainer({
 }) {
 
   return (
-    <Flex direction="column" gap={6}>
+    <Flex direction="column" gap={3}>
       <Container
         bg={gradientBg}
         p={5}
@@ -36,7 +36,7 @@ export default function CourseContainer({
           </Flex>
         }
       />
-      <SimpleGrid columns={[1, 1, 2, 3]} spacing={5}
+      <SimpleGrid columns={[1, 1, 2, 3]} spacing={2.5}
       >{courses.map((c, i) =>
         <MotionDiv
           key={i}

@@ -4,16 +4,16 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import Panaverse from '../../images/panaverse.png';
 import styles from './topbar.module.css'
-import { Mobbar, NavBtns, NavIconBtn } from './mobbar';
+import { Mobbar, NavBtns } from './mobbar';
 import Darkmode from './darkmode';
-import { BsBook as CourseIcon } from 'react-icons/bs'
-import { BiHomeAlt as HomeIcon } from 'react-icons/bi'
 
 export default function Topbar({ landscape }: { landscape: boolean }) {
 
   const [close, isClose] = useState(true);
 
-  return (<Flex direction="column" gap={3}>
+  return (<Flex direction="column" gap={3} bgColor="gray.700" _light={{
+    bgColor: 'gray.200'
+  }} p={2.5} rounded={9}>
     <Flex alignContent="center" alignItems="center" justifyContent="space-between" w="100%">
       <Flex>
         <Link href="/">
