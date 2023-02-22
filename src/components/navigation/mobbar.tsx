@@ -5,8 +5,8 @@ import { AiOutlineMenu as MenuIcon } from 'react-icons/ai';
 import { TfiClose as CloseIcon } from 'react-icons/tfi'
 import { BsBook as CourseIcon } from 'react-icons/bs'
 import { BiHomeAlt as HomeIcon } from 'react-icons/bi'
-import { useRouter } from 'next/navigation';
 import Darkmode from './darkmode';
+import Link from 'next/link';
 
 
 export const Mobbar = (
@@ -57,13 +57,11 @@ export function NavIconBtn({
   route: string,
   arialabel: string
 }) {
-  const { push } = useRouter();
   return (
-    <Button
-      onClick={() => push(route)}
-      leftIcon={<Icon as={icon} />}
-    >
-      {arialabel}
-    </Button>
+    <Link href={route}>
+      <Button leftIcon={<Icon as={icon} />}>
+        {arialabel}
+      </Button>
+    </Link>
   )
 }

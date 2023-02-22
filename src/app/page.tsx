@@ -14,7 +14,7 @@ export default function Home() {
 
   const [isLandscape] = useMediaQuery('(min-width: 767px)');
 
-  return (<Flex direction="column" gap="2rem">
+  return (<Flex direction="column" gap="1rem">
     <Container
       padding={10}
       rounded={9}
@@ -53,17 +53,19 @@ export default function Home() {
     />
 
     <Container
-      element={<SimpleGrid columns={[1, 1, 2, 2, 2]} spacing={10}>
+      element={<SimpleGrid columns={[1, 1, 2, 2, 2]} spacing={5}>
         <MotionDiv transition={{ type: "tween" }} dimension="y">
-          <Heading mb={3}>
-            {home[2].info?.head}
-          </Heading>
-          <Text textAlign="left">
-            {home[2].info?.text}
-          </Text>
+          <Flex p={5} direction="column">
+            <Heading mb={3}>
+              {home[2].info?.head}
+            </Heading>
+            <Text textAlign="left">
+              {home[2].info?.text}
+            </Text>
+          </Flex>
         </MotionDiv>
-        <SimpleGrid columns={[1, 1, 2, 2, 2]} spacing={10}>
-          <Flex direction="column" gap={8} justifyContent="center" alignItems="center">
+        <SimpleGrid columns={[1, 1, 2, 2, 2]} spacing={4}>
+          <Flex direction="column" gap={4} justifyContent="center" alignItems="center">
             <MotionDiv transition={{ type: "tween" }} dimension="x">
               <Image src={KarachiImage} alt="karachi" className="city" />
             </MotionDiv>
@@ -71,7 +73,7 @@ export default function Home() {
               <Image src={LahoreImage} alt="lahore" className="city" />
             </MotionDiv>
           </Flex>
-          <Flex direction="column" gap={8} justifyContent="center" alignItems="center">
+          <Flex direction="column" gap={4} justifyContent="center" alignItems="center">
             <MotionDiv transition={{ type: "tween" }} dimension="x">
               <Image src={PeshawarImage} alt="peshawar" className="city" />
             </MotionDiv>
@@ -86,8 +88,16 @@ export default function Home() {
 
     <Container
       element={<MotionDiv dimension="y" transition={{ type: "tween" }}>
-        <Flex direction="column" justifyContent="center" alignItems="center" textAlign="center" paddingInline="8vw" paddingBlock="3vw">
-          <Heading mb={5}>
+        <Flex
+          direction="column"
+          justifyContent="center"
+          alignItems="center"
+          textAlign="center"
+          paddingInline="8vw"
+          paddingBlock="3vw"
+          gap={4}
+        >
+          <Heading>
             {home[3].prog?.head}
           </Heading>
           <Text>
@@ -100,12 +110,23 @@ export default function Home() {
 
     <Container
       element={<MotionDiv negInit={true} dimension="y">
-        <Flex direction={['column', 'column', 'column', 'row']} gap={6}>
-          <Flex direction="column" bgColor="gray.200" _dark={{
-            bgColor: "gray.700"
-          }} rounded={9} p="8%">
+        <Flex
+          direction={['column', 'column', 'column', 'row']}
+          gap={6}
+        >
+          <Flex
+            direction="column"
+            bgColor="gray.200"
+            _dark={{
+              bgColor: "gray.700"
+            }}
+            rounded={9}
+            p={5}
+          >
             <Heading
-              mb={3} size={["lg", "xl", "lg", "xl"]}>
+              mb={3}
+              size={["lg", "xl", "lg", "xl"]}
+            >
               {home[4].prog2?.head}
             </Heading>
             <Text>{home[4].prog2?.text}</Text>
@@ -117,8 +138,8 @@ export default function Home() {
 
     <Container
       element={<MotionDiv dimension="x">
-        <Heading mb={5}>{home[5].out?.head}</Heading>
-        <Flex direction={['column', 'column', 'column', 'row']} gap={6} justifyContent="center" alignItems="center">
+        <Flex direction="column" gap={6} p={5}>
+          <Heading textAlign="left">{home[5].out?.head}</Heading>
           <Text>{home[5].out?.text}</Text>
         </Flex>
       </MotionDiv>

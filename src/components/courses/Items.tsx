@@ -3,9 +3,9 @@
 import MotionDiv from '@/utils/motion';
 import { Flex, Heading, SimpleGrid } from '@chakra-ui/react'
 import Image, { StaticImageData } from 'next/image';
-import { useRouter } from 'next/navigation';
 import React from 'react';
 import { specs } from '@/constants/course';
+import Link from 'next/link';
 
 export default function Items({
   items,
@@ -63,36 +63,36 @@ function Item({
   heading: string
 }) {
 
-  const { push } = useRouter()
-
   return (
     <MotionDiv
       negInit={true}
       dimension="x"
     >
-      <Flex
-        gap={3}
-        boxShadow="lg"
-        bgColor="gray.700"
-        cursor="pointer"
-        rounded={9}
-        justifyContent="center"
-        h="50vh"
-        alignItems="center"
-        onClick={() => push(route)}
-        _light={{
-          bgColor: 'gray.200'
-        }}
-        direction={['column', 'row', 'row', 'row', 'row']}
-      >
-        {image && <Image src={image} alt={heading} width="200" />}
-        <Heading
-          textAlign="center"
-          size={
-            image ? ["md", "xl", "xl", "xl"] : "md"
-          }>
-          {heading}
-        </Heading>
-      </Flex></MotionDiv>
+      <Link href={route}>
+        <Flex
+          gap={3}
+          boxShadow="lg"
+          bgColor="gray.700"
+          cursor="pointer"
+          rounded={9}
+          justifyContent="center"
+          h="50vh"
+          alignItems="center"
+          _light={{
+            bgColor: 'gray.200'
+          }}
+          direction={['column', 'row', 'row', 'row', 'row']}
+        >
+          {image && <Image src={image} alt={heading} width="200" />}
+          <Heading
+            textAlign="center"
+            size={
+              image ? ["md", "xl", "xl", "xl"] : "md"
+            }>
+            {heading}
+          </Heading>
+        </Flex>
+      </Link>
+    </MotionDiv>
   )
 }
