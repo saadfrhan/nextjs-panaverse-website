@@ -29,7 +29,7 @@ export default function Layout({
   return (<MotionDiv dimension="x" negInit={true} transition={{
     type: "tween"
   }}>
-    <Flex direction={['column', 'column', 'row', 'row', 'row']} justifyContent="space-between" >
+    <Flex direction={['column', 'column', 'row', 'row', 'row']} justifyContent="space-between" gap={3}>
       {(isLandscape || show) && <Flex direction="column" p={5} gap={3} w={['100%', '100%', '100%', '100%', '30%']}>
         {!isLandscape && (
           <IconButton
@@ -68,6 +68,7 @@ export default function Layout({
                 <h2>
                   <AccordionButton
                     rounded={9}
+                    mb={2}
                     _focusVisible={{
                       border: 'none'
                     }}

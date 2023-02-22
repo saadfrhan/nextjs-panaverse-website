@@ -3,6 +3,7 @@
 import QuarterItem from '@/components/courses/QuarterItem';
 import Container from '@/components/home/container';
 import { gradientBg } from '@/constants/home';
+import MotionDiv from '@/utils/motion';
 import { Flex, Heading, SimpleGrid, Text } from '@chakra-ui/react'
 
 export default function CourseContainer({
@@ -37,10 +38,16 @@ export default function CourseContainer({
       />
       <SimpleGrid columns={[1, 1, 2, 3]} spacing={5}
       >{courses.map((c, i) =>
-        <QuarterItem
+        <MotionDiv
           key={i}
-          {...c}
-        />
+          negInit={true}
+          dimension="y"
+          transition={{ type: "spring", stiffness: 100 }}
+        >
+          <QuarterItem
+            {...c}
+          />
+        </MotionDiv>
       )}
       </SimpleGrid>
     </Flex>

@@ -1,6 +1,4 @@
-export const gradientBg = "linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12)";
-
-export const shadowColor = "rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset"
+export const gradientBg = "linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);";
 
 export const home = [
   {
