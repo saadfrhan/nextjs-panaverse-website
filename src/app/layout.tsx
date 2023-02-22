@@ -36,8 +36,7 @@ export default function RootLayout({
             animate={{ opacity: isInView ? 1 : 0 }}
           >
             <Flex
-              paddingBlock="2%"
-              paddingInline="2.5%"
+              padding="2%"
               direction="column"
               gap={3}
             >

@@ -59,7 +59,7 @@ export function NavIconBtn({
 }) {
   return (
     <Link href={route}>
-      <Button leftIcon={<Icon as={icon} />}>
+      <Button leftIcon={<Icon as={icon} />} w="100%">
         {arialabel}
       </Button>
     </Link>
