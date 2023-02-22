@@ -1,23 +1,17 @@
-import { gradientBg } from "@/constants/home";
 import { HeadingBlock } from "@/ts";
-import { Flex, Heading, Text } from "@chakra-ui/react";
-import Link from "next/link";
+import { Heading } from "@chakra-ui/react";
 
 const HeadingBlock: React.FC<HeadingBlock> = ({ heading }) => {
 
-  return <Link
-    href={`/courses/${heading.toLowerCase().replaceAll(' ', '-').replace(':', '')}`}
+  return <Heading
+    size="md"
+    color='lightseagreen'
+    textDecoration='underline'
+    cursor="pointer"
+    rounded={9}
   >
-    <Heading
-      size="md"
-      color='lightseagreen'
-      textDecoration='underline'
-      cursor="pointer"
-      rounded={9}
-    >
-      {heading}
-    </Heading>
-  </Link>
+    {heading}
+  </Heading>
 }
 
 export default HeadingBlock;
