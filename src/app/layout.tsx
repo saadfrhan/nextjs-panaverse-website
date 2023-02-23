@@ -39,7 +39,8 @@ export default function RootLayout({
               direction="column"
               gap={3}
               mr="0px"
-              p="2%"
+              paddingBlock="1.5%"
+              paddingInline="2%"
             >
               <Topbar landscape={landscape} />
               {children}
