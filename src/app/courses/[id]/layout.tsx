@@ -29,7 +29,7 @@ export default function Layout({
   return (<MotionDiv dimension="x" negInit={true} transition={{
     type: "tween"
   }}>
-    <Flex direction={['column', 'column', 'row', 'row', 'row']} justifyContent="space-between" gap={3}>
+    <Flex direction={['column', 'column', 'row', 'row', 'row']} justifyContent="space-between">
       {(isLandscape || show) && <Flex direction="column" p={5} gap={3} w={['100%', '100%', '100%', '100%', '30%']}>
         {!isLandscape && (
           <IconButton
@@ -104,7 +104,7 @@ export default function Layout({
 
       </Flex>}
       {
-        !isLandscape && <Button
+        !isLandscape && !show && <Button
           onClick={() => isShow(!show)}
         >
           Courses Menu
