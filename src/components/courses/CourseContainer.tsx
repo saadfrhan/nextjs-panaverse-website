@@ -36,7 +36,7 @@ export default function CourseContainer({
           </Flex>
         }
       />
-      <SimpleGrid columns={[1, 1, 2, 3]} spacing={2.5}
+      <SimpleGrid columns={courses.length > 2 ? [1, 1, 2, 3] : [1, 1, 2, 2]} spacing={2.5}
       >{courses.map((c, i) =>
         <MotionDiv
           key={i}

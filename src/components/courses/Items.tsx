@@ -72,6 +72,7 @@ function Item({
         <Flex
           gap={3}
           boxShadow="lg"
+          paddingInline={5}
           bgColor="gray.700"
           cursor="pointer"
           rounded={9}

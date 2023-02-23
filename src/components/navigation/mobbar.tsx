@@ -18,6 +18,7 @@ export const Mobbar = (
       <IconButton
         w={55} h={55}
         rounded={9}
+        boxShadow="lg"
         onClick={() => isClose(!close)}
         aria-label="home"
         icon={<Icon as={close ? MenuIcon : CloseIcon} />}
@@ -59,7 +60,7 @@ export function NavIconBtn({
 }) {
   return (
     <Link href={route}>
-      <Button leftIcon={<Icon as={icon} />} w="100%">
+      <Button boxShadow="lg" leftIcon={<Icon as={icon} />} w="100%">
         {arialabel}
       </Button>
     </Link>

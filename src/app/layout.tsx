@@ -36,9 +36,10 @@ export default function RootLayout({
             animate={{ opacity: isInView ? 1 : 0 }}
           >
             <Flex
-              padding="2%"
               direction="column"
               gap={3}
+              mr="0px"
+              p="2%"
             >
               <Topbar landscape={landscape} />
               {children}

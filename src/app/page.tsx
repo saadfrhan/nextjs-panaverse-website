@@ -28,7 +28,7 @@ export default function Home() {
               {home[0].heads?.second!}
             </Heading>
           </MotionDiv>
-          <MotionDiv negInit={true} dimension="x">
+          <MotionDiv negInit={true} dimension="y">
             <Heading size="1xl">
               {home[0].heads?.third}
             </Heading>
@@ -66,18 +66,18 @@ export default function Home() {
         </MotionDiv>
         <SimpleGrid columns={[1, 1, 2, 2, 2]} spacing={2}>
           <Flex direction="column" gap={2} justifyContent="center" alignItems="center">
-            <MotionDiv transition={{ type: "tween" }} dimension="x">
+            <MotionDiv transition={{ type: "tween" }} dimension="y">
               <Image src={KarachiImage} alt="karachi" className="city" />
             </MotionDiv>
-            <MotionDiv transition={{ type: "tween" }} dimension="x">
+            <MotionDiv transition={{ type: "tween" }} dimension="y">
               <Image src={LahoreImage} alt="lahore" className="city" />
             </MotionDiv>
           </Flex>
           <Flex direction="column" gap={2} justifyContent="center" alignItems="center">
-            <MotionDiv transition={{ type: "tween" }} dimension="x">
+            <MotionDiv transition={{ type: "tween" }} dimension="y">
               <Image src={PeshawarImage} alt="peshawar" className="city" />
             </MotionDiv>
-            <MotionDiv transition={{ type: "tween" }} dimension="x">
+            <MotionDiv transition={{ type: "tween" }} dimension="y">
               <Image src={IslamabadImage} alt="islamabad" className="city" />
             </MotionDiv>
           </Flex>
@@ -137,7 +137,7 @@ export default function Home() {
     />
 
     <Container
-      element={<MotionDiv dimension="x">
+      element={<MotionDiv dimension="y">
         <Flex direction="column" gap={6} p={5}>
           <Heading textAlign="left">{home[5].out?.head}</Heading>
           <Text>{home[5].out?.text}</Text>

@@ -8,6 +8,7 @@ export default function Darkmode() {
   return (
     <IconButton
       w={55} h={55}
+      boxShadow="lg"
       aria-label="toggle-mode"
       icon={<Icon as={colorMode === "dark" ? MdDarkMode : MdLightMode} />}
       onClick={toggleColorMode}

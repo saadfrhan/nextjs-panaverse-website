@@ -11,10 +11,8 @@ export default function Topbar({ landscape }: { landscape: boolean }) {
 
   const [close, isClose] = useState(true);
 
-  return (<Flex direction="column" gap={3} bgColor="gray.700" _light={{
-    bgColor: 'gray.200'
-  }} p={2.5} rounded={9}>
-    <Flex alignContent="center" alignItems="center" justifyContent="space-between" w="100%">
+  return (<Flex direction="column" gap={3}>
+    <Flex alignContent="center" alignItems="center" justifyContent="space-between">
       <Flex>
         <Link href="/">
           <Image alt="panaverse" src={Panaverse} className={styles.navpv} />
