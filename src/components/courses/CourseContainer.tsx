@@ -1,10 +1,9 @@
-"use client";
-
+'use client';
+import { Flex, Heading, SimpleGrid, Text } from '@chakra-ui/react';
 import QuarterItem from '@/components/courses/QuarterItem';
 import Container from '@/components/home/container';
 import { gradientBg } from '@/constants/home';
 import MotionDiv from '@/utils/motion';
-import { Flex, Heading, SimpleGrid, Text } from '@chakra-ui/react'
 
 export default function CourseContainer({
   heading,
@@ -21,15 +20,15 @@ export default function CourseContainer({
 }) {
 
   return (
-    <Flex direction="column" gap={3}>
+    <Flex direction='column' gap={3}>
       <Container
         bg={gradientBg}
         p={5}
-        color="white"
+        color='white'
         rounded={9}
         element={
-          <Flex direction="column">
-            <Heading size={["md", "lg", "lg", "xl"]}>
+          <Flex direction='column'>
+            <Heading size={['md', 'lg', 'lg', 'xl']}>
               {heading}
             </Heading>
             <Text>{description}</Text>
@@ -41,8 +40,8 @@ export default function CourseContainer({
         <MotionDiv
           key={i}
           negInit={true}
-          dimension="y"
-          transition={{ type: "spring", stiffness: 100 }}
+          dimension='y'
+          transition={{ type: 'spring', stiffness: 100 }}
         >
           <QuarterItem
             {...c}

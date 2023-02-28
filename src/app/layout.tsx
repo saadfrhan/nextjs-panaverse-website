@@ -1,15 +1,12 @@
-"use client";
-
-import {
-  ChakraProvider, Flex
-} from '@chakra-ui/react';
-import { Inter } from '@next/font/google'
-import '../styles/globals.css';
-import { motion, useInView } from "framer-motion";
-import { useMediaQuery } from '@chakra-ui/react';
-
-import Topbar from '@/components/navigation/topbar';
+'use client';
 import { useRef } from 'react';
+import { ChakraProvider, Flex } from '@chakra-ui/react';
+import { useMediaQuery } from '@chakra-ui/react';
+import { Inter } from '@next/font/google';
+import '../styles/globals.scss';
+import { motion, useInView } from 'framer-motion';
+import Topbar from '@/components/navigation/topbar';
+
 
 const inter = Inter({
   variable: '--inter-font',
@@ -24,11 +21,11 @@ export default function RootLayout({
 
   const [landscape] = useMediaQuery('(min-width: 767px)');
 
-  const ref = useRef(null)
-  const isInView = useInView(ref)
+  const ref = useRef(null);
+  const isInView = useInView(ref);
 
   return (
-    <html lang="en" ref={ref}>
+    <html lang='en' ref={ref}>
       <body className={inter.variable}>
         <ChakraProvider>
           <motion.div
@@ -36,11 +33,11 @@ export default function RootLayout({
             animate={{ opacity: isInView ? 1 : 0 }}
           >
             <Flex
-              direction="column"
+              direction='column'
               gap={3}
-              mr="0px"
-              paddingBlock="1.5%"
-              paddingInline="2%"
+              mr='0px'
+              paddingBlock='1.5%'
+              paddingInline='2%'
             >
               <Topbar landscape={landscape} />
               {children}
@@ -49,5 +46,5 @@ export default function RootLayout({
         </ChakraProvider>
       </body>
     </html >
-  )
-}
+  );
+};

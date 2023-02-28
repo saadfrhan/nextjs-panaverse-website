@@ -1,17 +1,17 @@
+import { IconButton, useColorMode, Icon } from '@chakra-ui/react';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
-import { IconButton, useColorMode, Icon } from '@chakra-ui/react'
 
-export default function Darkmode() {
+export default function Darkmode(): JSX.Element {
 
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <IconButton
       w={55} h={55}
-      boxShadow="lg"
-      aria-label="toggle-mode"
-      icon={<Icon as={colorMode === "dark" ? MdDarkMode : MdLightMode} />}
+      boxShadow='lg'
+      aria-label='toggle-mode'
+      icon={<Icon as={colorMode === 'dark' ? MdDarkMode : MdLightMode} />}
       onClick={toggleColorMode}
     />
-  )
-}
+  );
+};

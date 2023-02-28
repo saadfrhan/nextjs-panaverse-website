@@ -1,5 +1,5 @@
-import path from 'path';
-import fs from 'fs'
+import fs from 'node:fs';
+import path from 'node:path';
 
 export async function getPostData(id: string) {
 
@@ -10,4 +10,4 @@ export async function getPostData(id: string) {
     id,
     fileContents,
   };
-}
+};

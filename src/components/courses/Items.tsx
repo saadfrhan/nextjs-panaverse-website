@@ -1,11 +1,9 @@
-"use client";
-
-import MotionDiv from '@/utils/motion';
-import { Flex, Heading, SimpleGrid } from '@chakra-ui/react'
+'use client';
+import { Flex, Heading, SimpleGrid } from '@chakra-ui/react';
 import Image, { StaticImageData } from 'next/image';
-import React from 'react';
-import { specs } from '@/constants/course';
 import Link from 'next/link';
+import { specs } from '@/constants/course';
+import MotionDiv from '@/utils/motion';
 
 export default function Items({
   items,
@@ -27,9 +25,9 @@ export default function Items({
 
 
   return (
-    <Flex direction="column" pt={5} gap="2vw" alignItems="center" justifyContent="center" w="100%">
-      <Heading size={["2xl", "2xl", "2xl", "3xl"]}>{heading}</Heading>
-      <SimpleGrid columns={items[0].image ? [1, 1, 1, 2, 2] : [1, 1, 2, 2, 3]} spacing={5} w="100%"
+    <Flex direction='column' pt={5} gap='2vw' alignItems='center' justifyContent='center' w='100%'>
+      <Heading size={['2xl', '2xl', '2xl', '3xl']}>{heading}</Heading>
+      <SimpleGrid columns={items[0].image ? [1, 1, 1, 2, 2] : [1, 1, 2, 2, 3]} spacing={5} w='100%'
       >
         {items.map(({ heading, image }, id) => {
 
@@ -44,14 +42,14 @@ export default function Items({
             heading={heading}
             image={image}
             route={route}
-          />
+          />;
         }
         )
         }
       </SimpleGrid >
     </Flex >
-  )
-}
+  );
+};
 
 function Item({
   route,
@@ -66,34 +64,34 @@ function Item({
   return (
     <MotionDiv
       negInit={true}
-      dimension="x"
+      dimension='x'
     >
       <Link href={route}>
         <Flex
           gap={3}
-          boxShadow="lg"
+          boxShadow='lg'
           paddingInline={5}
-          bgColor="gray.700"
-          cursor="pointer"
+          bgColor='gray.700'
+          cursor='pointer'
           rounded={9}
-          justifyContent="center"
-          h="50vh"
-          alignItems="center"
+          justifyContent='center'
+          h='50vh'
+          alignItems='center'
           _light={{
             bgColor: 'gray.200'
           }}
           direction={['column', 'row', 'row', 'row', 'row']}
         >
-          {image && <Image src={image} alt={heading} width="200" />}
+          {image && <Image src={image} alt={heading} width='200' />}
           <Heading
-            textAlign="center"
+            textAlign='center'
             size={
-              image ? ["md", "xl", "xl", "xl"] : "md"
+              image ? ['md', 'xl', 'xl', 'xl'] : 'md'
             }>
             {heading}
           </Heading>
         </Flex>
       </Link>
     </MotionDiv>
-  )
-}
+  );
+};

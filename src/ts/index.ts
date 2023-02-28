@@ -1,6 +1,6 @@
-import { StaticImageData } from "next/image";
+import { StaticImageData } from 'next/image';
 
-export type Heads = "Specialized Tracks" | "Core Courses"
+export type Heads = 'Specialized Tracks' | 'Core Courses';
 
 export interface ItemProps {
   number: string;
@@ -8,15 +8,15 @@ export interface ItemProps {
   description?: string;
   isSpecialization?: boolean;
   image?: StaticImageData
-}
+};
 
 export interface HeadingBlock {
   description?: string,
   heading: string,
   isSpecialization: boolean,
   number?: string,
-}
+};
 
 export interface NumberLabel {
   number: string
-}
+};

@@ -1,21 +1,20 @@
-"use client";
-
-import { Flex } from "@chakra-ui/react";
+'use client';
+import { Flex } from '@chakra-ui/react';
 
 export default function Container({
-  bg = "white",
+  bg = 'white',
   element,
   ...props
 }: {
   bg?: string;
   element?: JSX.Element,
   [key: string]: any
-}) {
+}): JSX.Element {
   return (
-    <Flex bgImage={bg} width="100%" {...props} direction={['column', 'column', 'column', 'row']}>
+    <Flex bgImage={bg} width='100%' {...props} direction={['column', 'column', 'column', 'row']}>
       {element && element}
     </Flex>
-  )
-}
+  );
+};
 
 

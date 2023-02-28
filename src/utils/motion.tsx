@@ -1,5 +1,5 @@
 import { MutableRefObject, useRef } from 'react';
-import { motion, Transition, useInView } from "framer-motion";
+import { motion, Transition, useInView } from 'framer-motion';
 
 export default function MotionDiv({
   children,
@@ -13,10 +13,10 @@ export default function MotionDiv({
   transition?: Transition
 }) {
 
-  const ref = useRef(null)
-  const isInView = useInView(ref)
+  const ref = useRef(null);
+  const isInView = useInView(ref);
 
-  const dimensionInitial = negInit ? -50 : 50
+  const dimensionInitial = negInit ? -50 : 50;
 
   return (
     <motion.div initial={{
@@ -30,5 +30,5 @@ export default function MotionDiv({
         {children}
       </div>
     </motion.div>
-  )
+  );
 }
