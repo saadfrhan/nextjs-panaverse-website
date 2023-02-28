@@ -1,7 +1,6 @@
 export default function Head() {
   return (
     <>
-      <title>Home - Panaverse</title>
       <meta charSet="utf-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta

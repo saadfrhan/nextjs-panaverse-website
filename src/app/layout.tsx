@@ -11,6 +11,13 @@ import { useMediaQuery } from '@chakra-ui/react';
 import Topbar from '@/components/navigation/topbar';
 import { useRef } from 'react';
 
+export const metadata = {
+  title: 'Home - Panaverse',
+  description: `Certified Web 3.0 and Metaverse Developer:
+A Nationwide Program in Karachi, Lahore, Islamabad, and Peshawar
+Getting Ready for the Next Generation and Future of the Internet - Join a 13 Trillion Dollar Industry with 5 Billion Users`,
+};
+
 const inter = Inter({
   variable: '--inter-font',
   subsets: ['latin']

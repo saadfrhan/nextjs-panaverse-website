@@ -3,6 +3,12 @@ import { specs } from '@/constants/course'
 
 export async function generateStaticParams() {
   return ["0", "1", "2", "3", "4", "5"].map((id) => ({ id }));
+};
+
+export async function generateMetadata() {
+  return specs.specializations.map(({ heading, description }) => (
+    { title: heading, description }
+  ))
 }
 
 export default function Specialization({ params: { id } }: { params: { id: number } }) {
