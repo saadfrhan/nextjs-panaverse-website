@@ -18,11 +18,12 @@ export default function Home() {
     <Container
       padding={10}
       rounded={9}
+      boxShadow="lg"
       bg={gradientBg}
       element={
         <Flex direction="column" color="white" padding={['0%', '0%', '10%', '10%', '10%']} textAlign={isLandscape ? "center" : "left"}>
           <MotionDiv negInit={true} dimension="y" transition={{ type: "spring", stiffness: 100 }}>
-            <Heading fontWeight="extrabold" size={["lg", "xl"]} mb={4}>
+            <Heading fontWeight="extrabold" size={["lg", "xl"]} mb={4} color="white">
               {home[0].heads?.first!}
               <br />
               {home[0].heads?.second!}
@@ -37,7 +38,7 @@ export default function Home() {
       }
     />
 
-    <Container
+    <Container boxShadow="lg"
       element={<MotionDiv negInit={true} dimension="y">
         <Flex direction="column" bgColor="gray.100" _dark={{
           bgColor: "gray.700"
@@ -109,6 +110,7 @@ export default function Home() {
     />
 
     <Container
+      boxShadow="lg"
       element={<MotionDiv negInit={true} dimension="y">
         <Flex
           direction={['column', 'column', 'column', 'row']}

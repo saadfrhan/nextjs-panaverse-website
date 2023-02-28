@@ -9,9 +9,7 @@ import NumberLabel from './NumberLabel';
 const QuarterItem: React.FC<ItemProps> = ({
   number,
   heading,
-  description,
-  image,
-  isSpecialization = false,
+  image
 }) => {
 
   const route = `/courses/${heading.toLowerCase().replaceAll(' ', '-').replace(':', '')}`;
@@ -25,21 +23,17 @@ const QuarterItem: React.FC<ItemProps> = ({
           _dark={{
             bgColor: "gray.700"
           }}
+          boxShadow="lg"
           rounded={9}
           padding="4vh"
           direction="column"
           h="100%"
         >
-          {image && <Image src={image} alt={heading} />}
+          {image && <Image src={image} alt={heading} className="c-img" />}
           <NumberLabel
             number={number}
           />
-          <HeadingBlock
-            description={description}
-            heading={heading}
-            isSpecialization={isSpecialization}
-            number={number}
-          />
+          <HeadingBlock heading={heading} />
         </Flex>
       </Link>
     </MotionDiv>

@@ -2,6 +2,7 @@ import Markdown from "markdown-to-jsx";
 import styles from './course.module.css';
 import { getPostData } from "../../../utils/post_gen";
 import { course_slugs } from "@/constants/course";
+import { Metadata } from "next";
 
 export async function generateStaticParams() {
   return course_slugs.map((id) => ({ id }));
@@ -9,11 +10,17 @@ export async function generateStaticParams() {
 
 export async function generateMetadata(
   { params: { id } }: { params: { id: string } }
-) {
-  const title = (
-    id.split('-')[0] + "-" + id.split('-')[1]
-  ).toUpperCase();
-  return {title}
+): Promise<Metadata> {
+  function customizeTitle(_title: string[]) {
+    let title = (_title[0] + "-" + _title[1]).toUpperCase();
+    for (let i = 2; i < _title.length; i++) {
+      title = title + " " + _title[i][0].toUpperCase() + _title[i].substring(1)
+    }
+    return title
+  }
+  return {
+    title: customizeTitle(id.split('-'))
+  }
 }
 
 export default async function Course({ params: { id } }:

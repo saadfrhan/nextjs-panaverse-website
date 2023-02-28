@@ -25,6 +25,7 @@ export default function CourseContainer({
       <Container
         bg={gradientBg}
         p={5}
+        boxShadow="lg"
         color="white"
         rounded={9}
         element={

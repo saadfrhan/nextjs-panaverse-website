@@ -27,23 +27,18 @@ export default function Items({
 
 
   return (
-    <Flex direction="column" pt={5} gap="2vw" alignItems="center" justifyContent="center" w="100%">
+    <Flex direction="column" gap="2vw" alignItems="center" justifyContent="center" w="100%">
       <Heading size={["2xl", "2xl", "2xl", "3xl"]}>{heading}</Heading>
-      <SimpleGrid columns={items[0].image ? [1, 1, 1, 2, 2] : [1, 1, 2, 2, 3]} spacing={5} w="100%"
+      <SimpleGrid columns={items[0].image && !items[0].courses ? [1, 1, 1, 2, 2] : [1, 1, 2, 2, 3]} spacing={5} w="100%"
       >
-        {items.map(({ heading, image }, id) => {
-
-          const route = image ?
-            `/courses/${heading.toLowerCase().replace(' ', '-')}` :
-            `/courses/specializations/${specs.specializations.findIndex(
-              s => s.heading.toLowerCase().replaceAll(' ', '-') === heading.toLowerCase().replaceAll(' ', '-')
-            )}`;
+        {items.map((i, id) => {
 
           return <Item
             key={id}
-            heading={heading}
-            image={image}
-            route={route}
+            heading={i.heading}
+            image={i.image}
+            route={i.courses ? `/courses/${i.courses[0].slug}` : `/courses/${items[0].heading.toLowerCase().replace(' ', '-')}`}
+            isSpec={items[0].courses ? true : false}
           />
         }
         )
@@ -56,11 +51,13 @@ export default function Items({
 function Item({
   route,
   image,
-  heading
+  heading,
+  isSpec
 }: {
   route: string,
   image?: StaticImageData,
-  heading: string
+  heading: string,
+  isSpec: boolean
 }) {
 
   return (
@@ -70,25 +67,26 @@ function Item({
     >
       <Link href={route}>
         <Flex
-          gap={3}
-          boxShadow="lg"
+          columnGap={12}
+          rowGap={6}
           paddingInline={5}
+          boxShadow="lg"
           bgColor="gray.700"
           cursor="pointer"
           rounded={9}
           justifyContent="center"
           h="50vh"
-          alignItems="center"
+          alignItems={isSpec ? "flex-start" : "center"}
           _light={{
             bgColor: 'gray.200'
           }}
-          direction={['column', 'row', 'row', 'row', 'row']}
+          direction={isSpec ? 'column' : ['column', 'row', 'row', 'row', 'row']}
         >
           {image && <Image src={image} alt={heading} width="200" />}
           <Heading
-            textAlign="center"
+            textAlign={isSpec ? "left" : "center"}
             size={
-              image ? ["md", "xl", "xl", "xl"] : "md"
+              image && !isSpec ? ["md", "xl", "xl", "xl"] : "md"
             }>
             {heading}
           </Heading>

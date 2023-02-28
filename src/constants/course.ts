@@ -2,6 +2,13 @@ import QuarterOneImage from '../images/q01.png';
 import QuarterTwoImage from '../images/q02.png';
 import QuarterThreeImage from '../images/q03.png';
 
+import SpecOneImage from '../images/s01.webp';
+import SpecTwoImage from '../images/s02.webp';
+import SpecThreeImage from '../images/s03.webp';
+import SpecFourImage from '../images/s04.webp';
+import SpecFiveImage from '../images/s05.webp';
+import SpecSixImage from '../images/s06.webp';
+
 export const core_courses = {
   description: `Every participant of the program will start by completing the following three core courses:`,
   courses: [
@@ -43,6 +50,7 @@ export const specs = {
     number: "I",
     heading: "Web 3.0 (Blockchain) and Metaverse Specialization",
     description: `This Web 3.0 and Metaverse specialization focuses on developing full-stack Web 3.0 and Metaverse experiences for the next generation of the internet by specializing in building worlds that merge the best of cutting-edge decentralized distributed blockchains with 3D metaverse client experiences.`,
+    image: SpecOneImage,
     courses: [{
       number: "IV",
       heading: `W3-351: Developing Smart Contracts and Planet-Scale Web 3.0 Dapps`,
@@ -58,6 +66,7 @@ export const specs = {
     number: "II",
     heading: "Artificial Intelligence (AI) and Deep Learning Specialization",
     description: `The AI and Deep Learning specialization focuses on building and deploying intelligent APIs using OpenAI models and building custom Deep Learning Tensorflow models.`,
+    image: SpecTwoImage,
     courses: [{
       number: "IV",
       heading: `AI-351: Developing Planet-Scale Intelligent APIs and Python Programming`,
@@ -73,6 +82,7 @@ export const specs = {
     number: "III",
     heading: "Cloud-Native Computing Specialization",
     description: `The Cloud-Native Computing Specialization focuses on Containers, Kubernetes, and CDK for Kubernetes. `,
+    image: SpecThreeImage,
     courses: [{
       number: "IV",
       heading: `CN-351: Certified Kubernetes Application Developer (CKAD)`,
@@ -88,6 +98,7 @@ export const specs = {
     number: "IV",
     heading: "Ambient Computing and IoT Specialization",
     description: `The Ambient Computing and IoT Specialization focuses on building Smart Homes, Offices, Factories, and Cities using Voice computing, Matter Protocol, and Embedded Devices.`,
+    image: SpecFourImage,
     courses: [{
       number: "IV",
       heading: `AC-351: Ambient Computing with Voice Assistants and Matter Protocol Devices`,
@@ -103,6 +114,7 @@ export const specs = {
     number: "V",
     heading: "Genomics and Bioinformatics Specialization",
     description: `Genomics is the study of the total genetic makeup of individual organisms, and how this genetic information is structured, functions, and has evolved; bioinformatics encompasses a diverse range of analytical methods and tools applied to genomic data. This Specialization focuses on performing complex bioinformatics analysis using the most essential Python libraries and applications.`,
+    image: SpecFiveImage,
     courses: [{
       number: "IV",
       heading: `Bio-351: Python for Biologists`,
@@ -118,6 +130,7 @@ export const specs = {
     number: "VI",
     heading: "Network Programmability and Automation Specialization",
     description: `More than ever, network engineers are finding it challenging to complete their duties entirely manually. Network automation is now crucial due to new protocols, technologies, delivery models, and the requirement for enterprises to become more adaptable and agile. This course teaches network engineers how to automate systems with code using a variety of technologies and tools, including Linux, Python, APIs, and Git.`,
+    image: SpecSixImage,
     courses: [{
       number: "IV",
       heading: `NPA-351: CCNA 200-301 Certification`,
