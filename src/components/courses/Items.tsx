@@ -37,7 +37,7 @@ export default function Items({
             key={id}
             heading={i.heading}
             image={i.image}
-            route={i.courses ? `/courses/${i.courses[0].slug}` : `/courses/${items[0].heading.toLowerCase().replace(' ', '-')}`}
+            route={i.courses ? `/courses/${i.courses[0].slug}` : `/courses/${items[id].heading.toLowerCase().replace(' ', '-')}`}
             isSpec={items[0].courses ? true : false}
           />
         }
