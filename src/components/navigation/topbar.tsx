@@ -19,7 +19,7 @@ export default function Topbar({ landscape }: { landscape: boolean }) {
         </Link>
         {landscape &&
           <Flex gap={6} alignItems="center">
-            <NavBtns />
+            <NavBtns isClose={isClose} close={close} />
           </Flex>}
       </Flex>
       {!landscape && <Mobbar close={close} isClose={isClose} />}
