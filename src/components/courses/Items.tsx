@@ -27,9 +27,9 @@ export default function Items({
 
 
   return (
-    <Flex direction="column" gap="2vw" alignItems="center" justifyContent="center" w="100%">
-      <Heading size={["2xl", "2xl", "2xl", "3xl"]}>{heading}</Heading>
-      <SimpleGrid columns={items[0].image && !items[0].courses ? [1, 1, 1, 2, 2] : [1, 1, 2, 2, 3]} spacing={5} w="100%"
+    <Flex direction="column" gap="2vw" alignItems="center" justifyContent="center">
+      {/* <Heading size={["2xl", "2xl", "2xl", "3xl"]}>{heading}</Heading> */}
+      <SimpleGrid columns={items[0].image && !items[0].courses ? [1, 1, 1, 2, 2] : [1, 1, 2, 2, 3]} spacing={5}
       >
         {items.map((i, id) => {
 
@@ -67,24 +67,22 @@ function Item({
     >
       <Link href={route}>
         <Flex
-          columnGap={12}
           rowGap={6}
-          paddingInline={5}
+          p={5} 
           boxShadow="lg"
           bgColor="gray.700"
           cursor="pointer"
+          w="auto"
           rounded={9}
-          justifyContent="center"
-          h="50vh"
-          alignItems={isSpec ? "flex-start" : "center"}
+          alignItems="center"
           _light={{
             bgColor: 'gray.200'
           }}
           direction={isSpec ? 'column' : ['column', 'row', 'row', 'row', 'row']}
         >
-          {image && <Image src={image} alt={heading} width="200" />}
+          {image && <Image src={image} alt={heading} />}
           <Heading
-            textAlign={isSpec ? "left" : "center"}
+            textAlign="center"
             size={
               image && !isSpec ? ["md", "xl", "xl", "xl"] : "md"
             }>
