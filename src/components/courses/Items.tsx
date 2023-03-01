@@ -25,7 +25,6 @@ export default function Items({
   heading: string
 }) {
 
-
   return (
     <Flex direction="column" gap="2vw" alignItems="center" justifyContent="center" w="100%">
       <Heading size={["2xl", "2xl", "2xl", "3xl"]}>{heading}</Heading>
@@ -69,20 +68,20 @@ function Item({
         <Flex
           columnGap={12}
           rowGap={6}
-          paddingInline={5}
+          padding={15}
           boxShadow="lg"
           bgColor="gray.700"
           cursor="pointer"
           rounded={9}
           justifyContent="center"
-          h="50vh"
+          h="auto"
           alignItems={isSpec ? "flex-start" : "center"}
           _light={{
             bgColor: 'gray.200'
           }}
           direction={isSpec ? 'column' : ['column', 'row', 'row', 'row', 'row']}
         >
-          {image && <Image src={image} alt={heading} width="200" />}
+          {image && <Image src={image} alt={heading} className="show-image" />}
           <Heading
             textAlign={isSpec ? "left" : "center"}
             size={

@@ -21,3 +21,7 @@ img {
 .c-img {
   margin-bottom: 10px;
 }
+
+.show-image {
+  max-width: 200px;
+}
