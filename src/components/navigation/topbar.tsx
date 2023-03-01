@@ -28,7 +28,7 @@ export default function Topbar({ landscape }: { landscape: boolean }) {
     {!landscape && <Flex direction="column" gap={3}
       display={close ? "none" : "flex"}
     >
-      <NavBtns />
+      <NavBtns isClose={isClose} close={close} />
     </Flex>}
   </Flex>)
 }

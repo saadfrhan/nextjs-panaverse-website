@@ -28,7 +28,11 @@ export const Mobbar = (
   )
 }
 
-export function NavBtns() {
+export function NavBtns({
+  close, isClose
+}: {
+  close: boolean, isClose: Function
+}) {
   return <>{
     [{
       arialabel: 'Home',
@@ -40,10 +44,13 @@ export function NavBtns() {
       route: '/courses'
     }].map((item, idx) => (
       <NavIconBtn
+        close={close}
+        isClose={isClose}
         key={idx}
         arialabel={item.arialabel}
         icon={item.icon}
         route={item.route}
+
       />
     ))
   }</>
@@ -52,15 +59,17 @@ export function NavBtns() {
 export function NavIconBtn({
   icon,
   route,
-  arialabel
+  arialabel,
+  close, isClose
 }: {
   icon: any,
   route: string,
-  arialabel: string
+  arialabel: string,
+  close: boolean, isClose: Function
 }) {
   return (
-    <Link href={route}>
-      <Button boxShadow="lg" leftIcon={<Icon as={icon} />} w="100%">
+    <Link href={route} >
+      <Button boxShadow="lg" onClick={() => isClose(!close)} leftIcon={<Icon as={icon} />} w="100%">
         {arialabel}
       </Button>
     </Link>
