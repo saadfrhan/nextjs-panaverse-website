@@ -26,7 +26,9 @@ export default function Layout({
 
   const [show, isShow] = useState(false);
 
-  return (
+  return (<MotionDiv dimension="x" negInit={true} transition={{
+    type: "tween"
+  }}>
     <Flex direction={['column', 'column', 'row', 'row', 'row']} justifyContent="space-between">
       {(isLandscape || show) && <Flex direction="column" p={5} gap={3} w={['100%', '100%', '100%', '100%', '30%']}>
         {!isLandscape && (
@@ -101,17 +103,13 @@ export default function Layout({
         </Flex>
 
       </Flex>}
-      {
-        !isLandscape && !show && <Button
-          onClick={() => isShow(!show)}
-        >
-          Courses Menu
-        </Button>
-      }
+      {!isLandscape && !show && <Button
+        onClick={() => isShow(!show)}
+      >
+        Courses Menu
+      </Button>}
 
-      <MotionDiv dimension="x" negInit={true} transition={{
-        type: "tween"
-      }}>{children}</MotionDiv>
-    </Flex>
+      {children}
+    </Flex></MotionDiv>
   )
 }
