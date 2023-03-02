@@ -4,12 +4,10 @@ import MotionDiv from '@/utils/motion';
 import { Flex, Heading, SimpleGrid } from '@chakra-ui/react'
 import Image, { StaticImageData } from 'next/image';
 import React from 'react';
-import { specs } from '@/constants/course';
 import Link from 'next/link';
 
 export default function Items({
   items,
-  heading
 }: {
   items: {
     number?: string
@@ -67,20 +65,20 @@ function Item({
     >
       <Link href={route}>
         <Flex
-          rowGap={6}
-          p={5} 
+          gap={6}
           boxShadow="lg"
+          p={10}
           bgColor="gray.700"
+          alignItems="center"
           cursor="pointer"
           w="auto"
           rounded={9}
-          alignItems="center"
           _light={{
             bgColor: 'gray.200'
           }}
-          direction={isSpec ? 'column' : ['column', 'row', 'row', 'row', 'row']}
+          direction='column'
         >
-          {image && <Image src={image} alt={heading} />}
+          {image && <Image src={image} alt={heading} width="300" />}
           <Heading
             textAlign="center"
             size={
