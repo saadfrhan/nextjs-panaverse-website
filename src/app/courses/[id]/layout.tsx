@@ -26,9 +26,7 @@ export default function Layout({
 
   const [show, isShow] = useState(false);
 
-  return (<MotionDiv dimension="x" negInit={true} transition={{
-    type: "tween"
-  }}>
+  return (
     <Flex direction={['column', 'column', 'row', 'row', 'row']} justifyContent="space-between">
       {(isLandscape || show) && <Flex direction="column" p={5} gap={3} w={['100%', '100%', '100%', '100%', '30%']}>
         {!isLandscape && (
@@ -111,7 +109,9 @@ export default function Layout({
         </Button>
       }
 
-      {children}
-    </Flex> </MotionDiv>
+      <MotionDiv dimension="x" negInit={true} transition={{
+        type: "tween"
+      }}>{children}</MotionDiv>
+    </Flex>
   )
 }
