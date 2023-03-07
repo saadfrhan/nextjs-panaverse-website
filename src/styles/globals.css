@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   font-family: var(--inter-font) !important;
 }
@@ -24,4 +28,9 @@ img {
 
 .show-image {
   max-width: 200px;
+}
+
+.icon {
+  width: 90px !important;
+  height: 90px !important;
 }
