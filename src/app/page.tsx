@@ -36,7 +36,7 @@ export default function Home() {
           <br />
           {home[0].entry.second}
         </>,
-        className: "font-extrabold max-[640px]:text-3xl min-[640px]:text-4xl"
+        className: "2xl:text-5xl xl:text-4xl lg:text-3xl md:text-2xl sm:text-lg max-sm:text-lg leading-8 font-extrabold"
       }}
       secondary={{
         content: home[0].entry.third!,
@@ -60,7 +60,7 @@ export default function Home() {
       className="grid lg:grid-flow-col sm:grid-flow-row items-center justify-center gap-5"
       primary={{
         content: home[2].entry.first,
-        className: 'font-extrabold max-[640px]:text-2xl min-[640px]:text-4xl'
+        className: 'font-extrabold max-[640px]:text-2xl max-[640px]:text-center min-[640px]:text-4xl'
       }}
       secondary={{
         content: () => <div className="grid grid-flow-row gap-3 p-5 rounded-lg bg-gray-200 dark:bg-gray-600 shadow-lg">
@@ -80,7 +80,7 @@ export default function Home() {
     />
 
     <Container
-      className="2xl:grid-flow-col xl:grid-flow-col lg:grid-flow-col md:grid-flow-col sm:grid-flow-row grid grid-flow-row m-auto gap-6  justify-center w-auto max-[640px]:p-100/10 min-[640px]:p-100/5"
+      className="2xl:grid-flow-col xl:grid-flow-col lg:grid-flow-col md:grid-flow-row sm:grid-flow-row grid grid-flow-row m-auto gap-6 justify-center w-auto max-[640px]:p-100/10 min-[640px]:p-100/5"
       primary={{
         content: home[3].entry.first!,
         className: "font-extrabold max-[640px]:text-2xl min-[640px]:text-4xl"
@@ -98,7 +98,7 @@ export default function Home() {
       }}
       secondary={{
         content: () =>
-          <div className="2xl:grid-flow-col lg:grid-flow-col md:grid-flow-col grid-flow-row grid gap-8 sm:gap-2 max-sm:gap-2">
+          <div className="2xl:grid-flow-col lg:grid-flow-col md:grid-flow-row grid-flow-row grid  2xl:gap-8 xl:gap-8 lg:gap-8 md:gap-8 sm:gap-2 max-sm:gap-2">
             <Card
               heading={
                 home[4].entry.entries ?
@@ -156,7 +156,7 @@ export default function Home() {
       }}
       secondary={{
         content: () =>
-          <div className="2xl:grid-flow-col lg:grid-flow-col md:grid-flow-col grid-flow-row grid gap-8 sm:gap-2 max-sm:gap-2">
+          <div className="2xl:grid-flow-col lg:grid-flow-col md:grid-flow-row grid-flow-row grid 2xl:gap-8 xl:gap-8 lg:gap-8 md:gap-8 sm:gap-2 max-sm:gap-2">
 
             <Card
               heading={
