@@ -10,6 +10,7 @@ import { useMediaQuery } from '@chakra-ui/react';
 
 import Topbar from '@/components/navigation/topbar';
 import { useRef } from 'react';
+import Footer from '@/components/home/footer';
 
 const inter = Inter({
   variable: '--inter-font',
@@ -45,6 +46,7 @@ export default function RootLayout({
               <Topbar landscape={landscape} />
               {children}
             </Flex>
+            <Footer />
           </motion.div>
         </ChakraProvider>
       </body>

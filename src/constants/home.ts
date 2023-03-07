@@ -35,12 +35,15 @@ export const home = [
     entry: {
       first: "Program of Studies",
       entries: [{
+        heading: "Who's this for?",
         text: "This curriculum is intended for beginners who want to learn software development from the ground up. The emphasis will be on hands-on learning by educating students to produce projects. By the end of this program, students will have a solid foundation in software development."
       },
       {
+        heading: "What's the curricullum?",
         text: "The first three quarters are shared by all specialties and are dedicated to studying Object-Oriented Programming and cutting-edge Full-Stack Web 2.0 development. It employs a hybrid teaching format, with core onsite classes complemented by online Zoom laboratories and recorded videos."
       },
       {
+        heading: "What's the total duration and class timings?",
         text: "This complete program is going to be a fifteen-month-long hybrid program that includes both onsite and online classes and is divided into five quarters of 13 weeks each. To accommodate everyone, courses will be held primarily on weekends or after 6:00 p.m. (Pakistan Time) on weekdays."
       }]
     }
@@ -50,12 +53,15 @@ export const home = [
       first: "The Outcome for Participants of the Program",
       second: "The graduates of this program will own products (Full-Stack App Templates, AR and VR Experiences, and APIs) that are marketed globally by the Panaverse DAO and, if they like, will also be able to start off by offering services at a rate of $50 per hour ($96,000 per year). This would give Pakistani professionals and students a fantastic opportunity to better their financial situation while also giving the economy a much-needed boost by expanding software exports.",
       entries: [{
+        heading: "What the graduates will produce?",
         text: "The graduates of this program will own products (Full-Stack App Templates, AR and VR Experiences, and APIs) that are marketed globally by the Panaverse DAO."
       },
       {
+        heading: "What value will be provisioned?",
         text: "and, if they like, will also be able to start off by offering services at a rate of $50 per hour ($96,000 per year)."
       },
       {
+        heading: "What will the outcome?",
         text: "This would give Pakistani professionals and students a fantastic opportunity to better their financial situation while also giving the economy a much-needed boost by expanding software exports."
       }]
     }

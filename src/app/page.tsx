@@ -23,6 +23,7 @@ import {
 import {
   RiMoneyDollarCircleFill as MoneyIcon
 } from 'react-icons/ri'
+import { IconType } from "react-icons/lib";
 
 export default function Home() {
   return (<div className="grid grid-flow-row gap-y-4">
@@ -62,7 +63,7 @@ export default function Home() {
         className: 'font-extrabold max-[640px]:text-2xl min-[640px]:text-4xl'
       }}
       secondary={{
-        content: () => <div className="grid grid-flow-row gap-3">
+        content: () => <div className="grid grid-flow-row gap-3 p-5 rounded-lg bg-gray-200 dark:bg-gray-600 shadow-lg">
           <p>{home[2].entry.second!}</p>
           <p>{home[2].entry.third!}</p>
           <p>{home[2].entry.fourth!}</p>
@@ -90,54 +91,136 @@ export default function Home() {
     />
 
     <Container
-      className="grid grid-flow-row gap-3 max-[640px]:pb-100/20 min-[640px]:pb-100/5"
+      className="grid grid-flow-row gap-3"
       primary={{
         content: home[4].entry.first,
         className: "font-extrabold text-center max-[640px]:text-2xl min-[640px]:text-4xl p-5"
       }}
       secondary={{
         content: () =>
-          <div className="2xl:grid-flow-col 2xl:gap-4 xl:grid-flow-col xl:gap-4 lg:grid-flow-col lg:gap-4 md:grid-flow-col md:gap-4 sm:grid-flow-row grid grid-flow-row gap-2 m-auto w-auto">
-            <div className="grid grid-flow-row gap-6 p-5 rounded-lg bg-gradient-to-r from-orange-500 to-orange-600 text-white h-fit">
-              <BeginnerIcon className="fill-black bg-white w-12 h-12 rounded-lg p-2 dark:bg-gray-800 dark:fill-white" />
-              <p>{home[4].entry.entries && home[4].entry.entries[0].text}</p>
-            </div>
-            <div className="grid grid-flow-row gap-6 p-5 rounded-lg bg-gradient-to-r from-green-500 to-green-600 text-white h-fit">
-              <CourseIcon className="fill-black bg-white w-12 h-12 rounded-lg p-2 dark:bg-gray-800 dark:fill-white" />
-              <p>{home[4].entry.entries && home[4].entry.entries[1].text}</p>
-            </div>
-            <div className="grid grid-flow-row gap-6 p-5 rounded-lg bg-gradient-to-r from-red-500 to-red-500 text-white h-fit">
-              <ClockIcon className="fill-black bg-white w-12 h-12 rounded-lg p-2 dark:bg-gray-800 dark:fill-white" />
-              <p>{home[4].entry.entries && home[4].entry.entries[2].text}</p>
-            </div>
+          <div className="2xl:grid-flow-col lg:grid-flow-col md:grid-flow-col grid-flow-row grid gap-8 sm:gap-2 max-sm:gap-2">
+            <Card
+              heading={
+                home[4].entry.entries ?
+                  home[4].entry.entries[0].heading :
+                  ""
+              }
+              text={
+                home[4]?.entry?.entries ?
+                  home[4]?.entry?.entries?.[0]?.text :
+                  ""
+              }
+              Icon={BeginnerIcon}
+              gradient="from-orange-500 to-orange-600"
+            />
+
+            <Card
+              heading={
+                home[4].entry.entries ?
+                  home[4].entry.entries[1].heading :
+                  ""
+              }
+              text={
+                home[4]?.entry?.entries ?
+                  home[4]?.entry?.entries?.[1]?.text :
+                  ""
+              }
+              Icon={CourseIcon}
+              gradient="from-green-500 to-green-600"
+            />
+
+            <Card
+              heading={
+                home[4].entry.entries ?
+                  home[4].entry.entries[2].heading :
+                  ""
+              }
+              text={
+                home[4]?.entry?.entries ?
+                  home[4]?.entry?.entries?.[2]?.text :
+                  ""
+              }
+              Icon={ClockIcon}
+              gradient="from-red-500 to-red-500"
+            />
+
           </div>
       }}
     />
 
     <Container
-      className="grid grid-flow-row gap-3 max-[640px]:pb-100/20 min-[640px]:pb-100/5"
+      className="grid grid-flow-row gap-3"
       primary={{
         content: home[5].entry.first,
         className: "font-extrabold text-center max-[640px]:text-2xl min-[640px]:text-4xl p-5"
       }}
       secondary={{
         content: () =>
-          <div className="2xl:grid-flow-col 2xl:gap-4 xl:grid-flow-col xl:gap-4 lg:grid-flow-col lg:gap-4 md:grid-flow-col md:gap-4 sm:grid-flow-row grid grid-flow-row gap-2 m-auto w-auto">
-            <div className="grid grid-flow-row gap-6 p-5 rounded-lg bg-gradient-to-r from-amber-500 to-amber-600 text-white h-fit">
-              <ProductIcon className="fill-black bg-white w-12 h-12 rounded-lg p-2 dark:bg-gray-800 dark:fill-white" />
-              <p>{home[5]?.entry?.entries?.[0]?.text}</p>
-            </div>
-            <div className="grid grid-flow-row gap-6 p-5 rounded-lg bg-gradient-to-r from-amber-500 to-amber-600 text-white h-fit">
-              <BuildingIcon className="fill-black bg-white w-12 h-12 rounded-lg p-2 dark:bg-gray-800 dark:fill-white" />
-              <p>{home[5]?.entry?.entries?.[1]?.text}</p>
-            </div>
-            <div className="grid grid-flow-row gap-6 p-5 rounded-lg bg-gradient-to-r from-amber-500 to-amber-600 text-white h-fit">
-              <MoneyIcon className="fill-black bg-white w-12 h-12 rounded-lg p-2 dark:bg-gray-800 dark:fill-white" />
-              <p>{home[5]?.entry?.entries?.[2]?.text}</p>
-            </div>
+          <div className="2xl:grid-flow-col lg:grid-flow-col md:grid-flow-col grid-flow-row grid gap-8 sm:gap-2 max-sm:gap-2">
+
+            <Card
+              heading={
+                home[5].entry.entries ?
+                  home[5].entry.entries[0].heading :
+                  ""
+              }
+              text={
+                home[5]?.entry?.entries ?
+                  home[5]?.entry?.entries?.[0]?.text :
+                  ""
+              }
+              Icon={ProductIcon}
+              gradient="from-amber-500 to-amber-600"
+            />
+
+            <Card
+              heading={
+                home[5].entry.entries ?
+                  home[5].entry.entries[1].heading :
+                  ""
+              }
+              text={
+                home[5]?.entry?.entries ?
+                  home[5]?.entry?.entries?.[1]?.text :
+                  ""
+              }
+              Icon={BuildingIcon}
+              gradient="from-amber-500 to-amber-600"
+            />
+
+            <Card
+              heading={
+                home[5].entry.entries ?
+                  home[5].entry.entries[2].heading :
+                  ""
+              }
+              text={
+                home[5]?.entry?.entries ?
+                  home[5]?.entry?.entries?.[2]?.text :
+                  ""
+              }
+              Icon={MoneyIcon}
+              gradient="from-amber-500 to-amber-600"
+            />
+
           </div>
       }}
     />
 
   </div>)
+}
+
+function Card(
+  { heading, text, gradient, Icon }:
+    { heading: string, text: string, gradient: string, Icon: IconType }
+) {
+  return (
+    <div className={`grid grid-flow-row gap-6 p-10 rounded-lg bg-gradient-to-r ${gradient} text-white h-fit shadow-lg`}>
+      <Icon className="fill-black bg-white w-12 h-12 rounded-lg p-2 dark:bg-gray-800 dark:fill-white shadow-lg" />
+      <div className="grid grid-flow-row gap-4">
+        <h1 className="font-extrabold max-[640px]:text-2xl min-[640px]:text-4xl">{heading}</h1>
+        <p>{text}</p>
+      </div>
+    </div>
+  )
 }

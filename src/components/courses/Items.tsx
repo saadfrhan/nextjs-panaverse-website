@@ -60,8 +60,8 @@ function Item({
 
   return (
     <MotionDiv
-      negInit={true}
-      dimension="x"
+      negativeStart={true}
+      dimension="y"
     >
       <Link href={route}>
         <Flex

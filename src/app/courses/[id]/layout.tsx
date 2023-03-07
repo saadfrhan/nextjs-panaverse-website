@@ -26,7 +26,7 @@ export default function Layout({
 
   const [show, isShow] = useState(false);
 
-  return (<MotionDiv dimension="x" negInit={true} transition={{
+  return (<MotionDiv dimension="y" negativeStart={true} transition={{
     type: "tween"
   }}>
     <Flex direction={['column', 'column', 'row', 'row', 'row']} justifyContent="space-between">

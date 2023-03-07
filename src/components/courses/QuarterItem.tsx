@@ -15,7 +15,7 @@ const QuarterItem: React.FC<ItemProps> = ({
   const route = `/courses/${heading.toLowerCase().replaceAll(' ', '-').replace(':', '')}`;
 
   return (
-    <MotionDiv dimension="x" negInit={true} transition={{ type: 'tween' }}>
+    <MotionDiv dimension="y" negativeStart={true} transition={{ type: 'tween' }}>
       <Link href={route}>
         <Flex
           gap="1vw"

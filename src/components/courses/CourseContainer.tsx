@@ -24,24 +24,20 @@ export default function CourseContainer({
     <Flex direction="column" gap={3}>
       <Container
         bg={gradientBg}
-        p={5}
-        boxShadow="lg"
-        color="white"
-        rounded={9}
-        element={
-          <Flex direction="column">
-            <Heading size={["md", "lg", "lg", "xl"]}>
-              {heading}
-            </Heading>
-            <Text>{description}</Text>
-          </Flex>
-        }
+        className="flex-col text-left p-5 text-white gap-6"
+        primary={{
+          content: heading,
+          className: "font-extrabold max-[640px]:text-2xl min-[640px]:text-4xl"
+        }}
+        secondary={{
+          content: description
+        }}
       />
       <SimpleGrid columns={courses.length > 2 ? [1, 1, 2, 3] : [1, 1, 2, 2]} spacing={2.5}
       >{courses.map((c, i) =>
         <MotionDiv
           key={i}
-          negInit={true}
+          negativeStart={true}
           dimension="y"
           transition={{ type: "spring", stiffness: 100 }}
         >
