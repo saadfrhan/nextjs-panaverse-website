@@ -27,7 +27,7 @@ export default function Items({
   return (
     <Flex direction="column" gap="2vw" alignItems="center" justifyContent="center">
       {/* <Heading size={["2xl", "2xl", "2xl", "3xl"]}>{heading}</Heading> */}
-      <SimpleGrid columns={items[0].image && !items[0].courses ? [1, 1, 1, 2, 2] : [1, 1, 2, 2, 3]} spacing={5}
+      <SimpleGrid columns={items[0].image && !items[0].courses ? [1, 1, 2, 2, 2] : [1, 1, 2, 2, 3]} spacing={5}
       >
         {items.map((i, id) => {
 

@@ -36,7 +36,7 @@ export default function Home() {
           <br />
           {home[0].entry.second}
         </>,
-        className: "2xl:text-5xl xl:text-4xl lg:text-3xl md:text-2xl sm:text-lg max-sm:text-lg leading-8 font-extrabold"
+        className: "2xl:text-5xl xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl max-sm:text-xl leading-8 font-extrabold"
       }}
       secondary={{
         content: home[0].entry.third!,
