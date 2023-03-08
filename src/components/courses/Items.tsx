@@ -8,6 +8,7 @@ import Link from 'next/link';
 
 export default function Items({
   items,
+  heading
 }: {
   items: {
     number?: string
@@ -25,8 +26,8 @@ export default function Items({
 
 
   return (
-    <Flex direction="column" gap="2vw" alignItems="center" justifyContent="center">
-      {/* <Heading size={["2xl", "2xl", "2xl", "3xl"]}>{heading}</Heading> */}
+    <Flex direction="column" gap="1.5vw" alignItems="center" justifyContent="center">
+      <h1 className="2xl:text-5xl xl:text-5xl lg:text-3xl md:text-2xl sm:text-3xl max-sm:text-3xl leading-8 font-extrabold text-center">{heading}</h1>
       <SimpleGrid columns={items[0].image && !items[0].courses ? [1, 1, 2, 2, 2] : [1, 1, 2, 2, 3]} spacing={5}
       >
         {items.map((i, id) => {

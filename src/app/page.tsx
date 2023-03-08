@@ -24,6 +24,7 @@ import {
   RiMoneyDollarCircleFill as MoneyIcon
 } from 'react-icons/ri'
 import { IconType } from "react-icons/lib";
+import Footer from "@/components/home/footer";
 
 export default function Home() {
   return (<div className="grid grid-flow-row gap-y-4">
@@ -206,7 +207,7 @@ export default function Home() {
           </div>
       }}
     />
-
+    <Footer />
   </div>)
 }
 
